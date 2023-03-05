@@ -15,8 +15,6 @@ pause
 exit 0
 
 
-exit 0
-
 #The following lines are not executed, there are only here to store and facilitate reuse of the script
 
 #Getting the last realease
