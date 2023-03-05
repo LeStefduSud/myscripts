@@ -31,3 +31,5 @@ cd rigel-1.3.8-linux/
 #listing
 rigel --list-devices
 
+#mining on woolypooly with all Card with
+./rigel -a nexapow -o stratum+tcp://pool.woolypooly.com:3124 -u nexa:nqtsq5g5wa882tktx2qj94qts96dkwcanw0dua9twh9ht6sk -w rig01 --cclock 210,255,255 --lock-cclock 1740,1680,1470 --lock-mclock 5001 --pl 170,200,270
