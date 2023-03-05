@@ -10,11 +10,17 @@
 
 
 #Only the following command will be really executed
+screen -S myminer
 ./bzminer 
 pause
 exit 0
 
+#Starting a named screen session to reattach it later quickly
+screen -S myminer
+screen -r myminer
 
 #The following lines are not executed, there are only here to store and facilitate reuse of the script
+mkdir -p myminer/rigel
+cd myminer/rigel
 
 #Getting the last realease
