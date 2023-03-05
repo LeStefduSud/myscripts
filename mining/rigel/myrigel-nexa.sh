@@ -10,7 +10,7 @@
 
 
 #Only the following command will be really executed
-screen -S myminer
+
 ./bzminer 
 pause
 exit 0
@@ -24,3 +24,9 @@ mkdir -p myminer/rigel
 cd myminer/rigel
 
 #Getting the last realease
+wget https://github.com/rigelminer/rigel/releases/download/1.3.8/rigel-1.3.8-linux.tar.gz
+tar -xzvf rigel-1.3.8-linux.tar.gz 
+cd rigel-1.3.8-linux/
+
+#listing
+
