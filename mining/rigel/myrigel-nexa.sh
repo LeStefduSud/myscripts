@@ -29,4 +29,5 @@ tar -xzvf rigel-1.3.8-linux.tar.gz
 cd rigel-1.3.8-linux/
 
 #listing
+rigel --list-devices
 
