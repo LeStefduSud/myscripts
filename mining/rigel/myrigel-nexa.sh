@@ -35,6 +35,6 @@ sudo ./rigel -a nexapow -o stratum+ssl://fr.vipor.net:5184 -u nexa:nqtsq5g5wa882
 
 #mining Nexa+Zil with same overclock settings
 # nexa + zil
-sudo ./rigel -a nexapow+zil -o [1]stratum+ssl://fr.vipor.net:5184 -u [1]nexa:nqtsq5g5wa882tktx2qj94qts96dkwcanw0dua9twh9ht6sk -o [2]stratum+ssl://fr.vipor.net:5184 -u [2]zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 -w rig01 --cclock 210,255,255 --lock-cclock 1740,1680,1470 --lock-mclock 5001 --pl 170,200,270
+sudo ./rigel -a nexapow+zil -o [1]stratum+ssl://fr.vipor.net:5184 -u [1]nexa:nqtsq5g5wa882tktx2qj94qts96dkwcanw0dua9twh9ht6sk -o [2]stratum+ssl://eu1-zil.shardpool.io:5555 -u [2]zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 -w rig01 --cclock 210,255,255 --lock-cclock 1740,1680,1470 --lock-mclock 5001 --pl 170,200,270
 #   -o [1]stratum+tcp://pool.vipor.net:5084   -u [1]YOUR_NEXA_WALLET \
 #   -o [2]stratum+tcp://us.crazypool.org:5005 -u [2]YOUR_ZIL_WALLET \
