@@ -30,7 +30,7 @@ rigel --list-devices
 #dual mining on woolypooly with all nvidia Card with no overclock
 sudo ./bzminer -a kaspa -w kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp.rig01 -p stratum+ssl://pool.woolypooly.com:3112 --nc 1 --a2 zil --w2 zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 --p2 zmp+ssl://eu1-zil.shardpool.io:5555 --nvidia 1
 
-#dual mining on woolypooly with all nvidia Card with overclock
+#dual mining on woolypooly with all nvidia Card with same overclock for the the two algo 
 sudo ./bzminer -a kaspa -w kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp.rig01 -p stratum+ssl://pool.woolypooly.com:3112 --nc 1 --a2 zil --w2 zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 --p2 zmp+ssl://eu1-zil.shardpool.io:5555 --nvidia 1 --oc_lock_core_clock 1675 --oc_lock_memory_clock 810 --oc_core_clock_offset 250
 
 #solo mining on vipor.net with all Card with
