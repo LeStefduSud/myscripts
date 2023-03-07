@@ -27,9 +27,11 @@ cd bzminer_v13.3.0_linux
 #listing
 rigel --list-devices
 
-#solo mining on woolypooly with all nvidia Card with
+#dual mining on woolypooly with all nvidia Card with no overclock
 sudo ./bzminer -a kaspa -w kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp.rig01 -p stratum+ssl://pool.woolypooly.com:3112 --nc 1 --a2 zil --w2 zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 --p2 zmp+ssl://eu1-zil.shardpool.io:5555 --nvidia 1
 
+#dual mining on woolypooly with all nvidia Card with overclock
+sudo ./bzminer -a kaspa -w kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp.rig01 -p stratum+ssl://pool.woolypooly.com:3112 --nc 1 --a2 zil --w2 zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 --p2 zmp+ssl://eu1-zil.shardpool.io:5555 --nvidia 1 --oc_lock_core_clock 1675 --oc_lock_memory_clock 810 --oc_core_clock_offset 250
 
 #solo mining on vipor.net with all Card with
 sudo ./rigel -a nexapow -o stratum+ssl://fr.vipor.net:5184 -u nexa:nqtsq5g5wa882tktx2qj94qts96dkwcanw0dua9twh9ht6sk -w rig01 --cclock 210,255,255 --lock-cclock 1740,1680,1470 --lock-mclock 5001 --pl 170,200,270
