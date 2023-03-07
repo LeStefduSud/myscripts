@@ -20,9 +20,9 @@ mkdir -p myminer/bzminer
 cd myminer/bzminer
 
 #Getting the last realease
-wget https://github.com/rigelminer/rigel/releases/download/1.3.8/rigel-1.3.8-linux.tar.gz
-tar -xzvf rigel-1.3.8-linux.tar.gz 
-cd rigel-1.3.8-linux/
+wget https://github.com/bzminer/bzminer/releases/download/v13.3.0/bzminer_v13.3.0_linux.tar.gz
+tar -xzvf bzminer_v13.3.0_linux.tar.gz
+cd bzminer_v13.3.0_linux
 
 #listing
 rigel --list-devices
