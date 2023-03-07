@@ -28,7 +28,7 @@ cd bzminer_v13.3.0_linux
 rigel --list-devices
 
 #solo mining on woolypooly with all nvidia Card with
-sudo ./bzminer -a kaspa -w kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp.rig01 -p stratum+ssl://pool.woolypooly.com:3112 --nc 1 --a2 zil --w2 zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 --p2 zmp+ssl://eu1-zil.shardpool.io:5555
+sudo ./bzminer -a kaspa -w kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp.rig01 -p stratum+ssl://pool.woolypooly.com:3112 --nc 1 --a2 zil --w2 zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 --p2 zmp+ssl://eu1-zil.shardpool.io:5555 --nvidia 1
 
 
 #solo mining on vipor.net with all Card with
