@@ -16,8 +16,8 @@ screen -S myminer
 screen -r myminer
 
 #The following lines are not executed, there are only here to store and facilitate reuse of the script
-mkdir -p myminer/rigel
-cd myminer/rigel
+mkdir -p myminer/bzminer
+cd myminer/bzminer
 
 #Getting the last realease
 wget https://github.com/rigelminer/rigel/releases/download/1.3.8/rigel-1.3.8-linux.tar.gz
