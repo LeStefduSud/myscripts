@@ -7,6 +7,8 @@
 #The following line is executed and the script exit
 
 #Only the following command will be really executed
+version="1.3.8"
+chemin="/chemin/vers/${nom_dossier}/fichier.txt"
 sudo ./bzminer -a kaspa -w kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp.rig01 -p stratum+ssl://de.kaspa.herominers.com:1206 --nc 1 --a2 zil --w2 zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 --p2 zmp+ssl://eu1-zil.shardpool.io:5555 --nvidia 1 --hide_disabled_devices --oc_lock_core_clock 1675 --oc_lock_memory_clock 810 --oc_core_clock_offset 250
 pause
 exit 0
