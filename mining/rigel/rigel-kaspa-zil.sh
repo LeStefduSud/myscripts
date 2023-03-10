@@ -24,7 +24,7 @@ ocs_zil1='--cclock [2]100 --lock-cclock [2]1200 --lock-mclock [2]X --mclock [2]1
 
 sudo ./rigel -a kheavyhash+zil \
     -o [1]stratum+ssl://de.kaspa.herominers.com:1206    -u [1]kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp \
-    -o [2]zmp+tcp://eu1-zil.shardpool.io:5555           -u [2]zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 \
+    -o [2]zmp+tcp://eu1-zil.shardpool.io:3333           -u [2]zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 \
     -w rig01 --log-file logs/miner.log \
     $(echo $ocs_kas1) $(echo $ocs_zil1)
 
