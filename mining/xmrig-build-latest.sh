@@ -1,12 +1,8 @@
 #!/bin/sh
 #/opt/xmrig/xmrig-build-latest.sh script for building the latest official version of Xmrig from gitHub##
 #
-# sudo chown stef2001 /opt/xmrig###
-
-
-
-
-
+# sudo chown stef2001 /opt/
+# mkdir -p /opt/xmrig
 
 
 
