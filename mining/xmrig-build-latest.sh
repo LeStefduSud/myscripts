@@ -1,5 +1,13 @@
 #!/bin/sh
-#/opt/xmrig/xmrig-build-latest.sh script for building the latest official version of Xmrig from gitHub
+#/opt/xmrig/xmrig-build-latest.sh script for building the latest official version of Xmrig from gitHub##
+#
+# sudo chown stef2001 /opt/xmrig###
+
+
+
+
+
+
 
 
 DEST=/opt/xmrig/xmrig
