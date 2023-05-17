@@ -1,4 +1,6 @@
 #!/bin/bash
+# This script can be downloaded and executed in 1 command line usin
+#wget -O - <script_url> | bash 
 
 # Download the latest version of the RaptoreumQT wallet
 wget https://github.com/Raptor3um/raptoreum/releases/latest/download/raptoreum-qt-linux-x64.tar.gz
