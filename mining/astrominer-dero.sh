@@ -5,5 +5,5 @@ wget https://github.com/dero-am/astrobwt-miner/releases/download/V1.9.1/astromin
 tar -xvf astrominer-V1.9.1.R2_modern_amd64_linux.tar.gz
 
 # starting
-./astrominer/astrominer -w dero1qydg07mc8526nzv40vam8xczkxu0vm3la4lmkzre92pcuewk44zg6qgsszedj -r community-pools.mysrv.cloud:10300 -m 11
+/opt/dero/astrominer/astrominer -w dero1qydg07mc8526nzv40vam8xczkxu0vm3la4lmkzre92pcuewk44zg6qgsszedj -r community-pools.mysrv.cloud:10300 -m 11
 
