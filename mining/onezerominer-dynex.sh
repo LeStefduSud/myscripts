@@ -16,7 +16,7 @@ cd ${minerfolder}
 #Nvidia	3080 10 g.	-	-				OneZeroMiner	1.1.3	525.116.04	7786	115	67,70	--cclk 1500 --coff 300 --mclk 5001
 ocs_dnx1='--devices 2 --cclk 1500 --coff 300 --mclk 5001 --pl 170'
 
-#updating clock in real time with nvtools for customizing OC
+# Updating Overclock Setting in real time with nvtools for customizing OC
 #sudo nvtool -i 2 -n --clocksinfo  --coreoffset --memoffset
 #sudo nvtool -i 2 -n --setclocks 1300 --setcoreoffset 100 --setmem 5001 --setmemoffset 0 --setpl 180
 
