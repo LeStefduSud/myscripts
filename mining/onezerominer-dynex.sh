@@ -18,7 +18,7 @@ ocs_dnx1='--devices 2 --cclk 1500 --coff 300 --mclk 5001 --pl 170'
 
 # Updating Overclock Setting in real time with nvtools for customizing OC
 #sudo nvtool -i 2 -n --clocksinfo  --coreoffset --memoffset
-#sudo nvtool -i 2 -n --setclocks 1300 --setcoreoffset 100 --setmem 5001 --setmemoffset 0 --setpl 180
+#sudo nvtool -i 2 -n --setclocks 1400 --setcoreoffset 100 --setmem 5001 --setmemoffset 0 --setpl 180
 
 
 sudo ./onezerominer -a dynex \
