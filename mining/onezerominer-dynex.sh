@@ -12,7 +12,13 @@ cd ${minerfolder}
 
 #Only the following command will be really executed
 #sudo ./rigel  -a kheavyhash -u kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp -w rig01 -o stratum+ssl://de.kaspa.herominers.com:1206 --cclock 210,255,255 --lock-cclock 1740,1680,1470 --lock-mclock 810 --pl 170,200,270
-ocs_dnx1='--devices 2 --coff 250 --cclk 1470 --mclk 810 --pl 170'
+#expected setting from Top OCear from MaketTronic
+#Nvidia	3080 10 g.	-	-				OneZeroMiner	1.1.3	525.116.04	7786	115	67,70	--cclk 1500 --coff 300 --mclk 5001
+ocs_dnx1='--devices 2 --cclk 1500 --coff 300 --mclk 5001 --pl 170'
+
+#updating clock in real time with nvtools for customizing OC
+#sudo nvtool -i 2 -n --clocksinfo  --coreoffset --memoffset
+#sudo nvtool -i 2 -n --setclocks 1300 --setcoreoffset 100 --setmem 5001 --setmemoffset 0 --setpl 180
 
 
 sudo ./onezerominer -a dynex \
