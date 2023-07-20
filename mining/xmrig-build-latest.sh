@@ -40,4 +40,4 @@ echo "End   at $(date)"
 echo "Restarting XMrig"
 killall -q - w xmrig
 cd /opt/xmrig
-./xmrig
+./xmrig -V
