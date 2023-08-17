@@ -23,7 +23,7 @@ stop dcrd (CTRL + C dans screen)
 ./dcrd --miningaddr=DsZWtL6UmZLXk66E8GTdafJka2LwiY5kuNf
 
 --redemarrage du node en précisant l'adresse de minage (ici sur mon adresse trustwallet)
-./dcrd Dsau2BTh18vmRW9N6mC5P9GXe1jS32WaDCn
+./dcrd --miningaddr=Dsau2BTh18vmRW9N6mC5P9GXe1jS32WaDCn
 
 --on lance la commande d'activation du minage sur 8 thread par exemple
 ./dcrctl setgenerate true 8
