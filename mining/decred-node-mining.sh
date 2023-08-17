@@ -11,6 +11,8 @@ screen ./dcrd
 
 --démarrer le client du wallet, et demander une nouvelle addresse et la sauver, attention il faut attendre la synchro du wallet lui meme
 screen ./dcrwallet
+
+--puis dans une autre fenetre demander une nouvelle adresse
 ./dcrctl --wallet getnewaddress
 
 --Stopper le démon, pour le redemarrer plus tard avec l'adresse générée
