@@ -19,6 +19,7 @@ screen ./dcrwallet
 --Stopper le démon, pour le redemarrer plus tard avec l'adresse générée
 stop dcrd (CTRL + C dans screen)
 
+--redemarrage du node en précisant l'adresse de minage
 ./dcrd --miningaddr=DsZWtL6UmZLXk66E8GTdafJka2LwiY5kuNf
 
 ./dcrctl setgenerate true
