@@ -27,4 +27,6 @@ stop dcrd (CTRL + C dans screen)
 ./dcrctl getmininginfo
 
 ./dcrctl --wallet getbalance
+./dcrctl --wallet getbalance DsZWtL6UmZLXk66E8GTdafJka2LwiY5kuNf
+
 ./dcrctl --wallet sendtoaddress <address> <amount>
