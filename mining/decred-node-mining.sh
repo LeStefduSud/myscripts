@@ -14,11 +14,12 @@ screen ./dcrwallet
 
 --puis dans une autre fenetre demander une nouvelle adresse
 ./dcrctl --wallet getnewaddress
+# adress DsZWtL6UmZLXk66E8GTdafJka2LwiY5kuNf générée su mon node 01
 
 --Stopper le démon, pour le redemarrer plus tard avec l'adresse générée
 stop dcrd (CTRL + C dans screen)
 
-./dcrd --miningaddr=DsUEAdz1xVtaU6GjozQuiEVhahjd9miGyvj
+./dcrd --miningaddr=DsZWtL6UmZLXk66E8GTdafJka2LwiY5kuNf
 
 ./dcrctl setgenerate true
 ./dcrctl getmininginfo
