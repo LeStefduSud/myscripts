@@ -14,7 +14,7 @@ screen ./dcrwallet
 
 --puis dans une autre fenetre demander une nouvelle adresse
 ./dcrctl --wallet getnewaddress
-# adress DsZWtL6UmZLXk66E8GTdafJka2LwiY5kuNf générée su mon node 01
+ --address DsZWtL6UmZLXk66E8GTdafJka2LwiY5kuNf générée su mon node 01
 
 --Stopper le démon, pour le redemarrer plus tard avec l'adresse générée
 stop dcrd (CTRL + C dans screen)
