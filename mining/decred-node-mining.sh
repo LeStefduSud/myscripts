@@ -9,7 +9,7 @@ chmod +x dcrinstall-linux-amd64-v1.8.0
 --suivre les instructions pour monter le node, pensez a sauver la seed lors de la création du wallet et attendre la synchro
 screen ./dcrd
 
---démarrer le client du wallet, et demander une nouvelle addresse et la sauver
+--démarrer le client du wallet, et demander une nouvelle addresse et la sauver, attention il faut attendre la synchro du wallet lui meme
 screen ./dcrwallet
 ./dcrctl --wallet getnewaddress
 
