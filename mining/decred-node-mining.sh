@@ -22,7 +22,8 @@ stop dcrd (CTRL + C dans screen)
 --redemarrage du node en précisant l'adresse de minage
 ./dcrd --miningaddr=DsZWtL6UmZLXk66E8GTdafJka2LwiY5kuNf
 
-./dcrctl setgenerate true
+--on lance la commande d'activation du minage sur 8 thread par exemple
+./dcrctl setgenerate true 8
 ./dcrctl getmininginfo
 
 ./dcrctl --wallet getbalance
