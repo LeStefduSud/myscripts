@@ -1,17 +1,14 @@
 #!/bin/sh
 #/opt/xmrig/xmrig-build-latest.sh script for building the latest official version of Xmrig from gitHub##
-#
+# wget -O - https://raw.githubusercontent.com/LeStefduSud/myscripts/main/mining/xmrig-build-latest.sh | bash
 # sudo chown stef2001 /opt/
 # mkdir -p /opt/xmrig
 
 
-
-DEST=/opt/xmrig/xmrig
-
 echo "This script will try to build the latest version of xmrig from GitHub"
 echo "More build instruction can be found at https://xmrig.com/docs/miner/build/ubuntu"
 echo "Start at $(date)"
-
+DEST=/opt/xmrig/xmrig
 
 echo "Getting stuff for building"
 apt-get update
