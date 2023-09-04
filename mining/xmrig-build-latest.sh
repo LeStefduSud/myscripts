@@ -1,6 +1,6 @@
 #!/bin/sh
 #/opt/xmrig/xmrig-build-latest.sh script for building the latest official version of Xmrig from gitHub##
-# wget -O - https://raw.githubusercontent.com/LeStefduSud/myscripts/main/mining/xmrig-build-latest.sh | bash
+# wget -O - https://raw.githubusercontent.com/LeStefduSud/myscripts/main/mining/xmrig-build-latest.sh | sudo bash
 # sudo chown stef2001 /opt/
 # mkdir -p /opt/xmrig
 
