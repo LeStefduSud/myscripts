@@ -1,8 +1,15 @@
 #!/bin/sh
 #Stef mining a GhostRider coin VarseShhain https://varsechain.com/#
-#On my Core Wallet
+#On my Core Wallet VDB7tbv9qe6P8XTcY9hEfoWv2wZGYH55FA
 
-/opt/xmrig/xmrig -a rx/0 \
-  -o de.monero.herominers.com:1111 --donate-level 0  --threads=4\
-  -u 48DWUzoTANZAMakwHVKqJq6JT3Ah2SfFC5i5nVrkFVREVaKcPet8hP9MPFapEveUCr3mLZCmnChUG7THLu7maDENLvsyaZZ \ 
+/opt/xmrig/xmrig -a ghostrider \
+  -url stratum-eu.rplant.xyz:17093 --donate-level 0  --threads=4\
+  --tls --user VDB7tbv9qe6P8XTcY9hEfoWv2wZGYH55FA.test01\
   -k -p ubuntu
+
+exit
+#!/bin/sh
+while [ 1 ]; do
+	./xmrig -a ghostrider --url stratum-eu.rplant.xyz:17093 --tls --user VDB7tbv9qe6P8XTcY9hEfoWv2wZGYH55FA.test01
+	sleep 5
+done
