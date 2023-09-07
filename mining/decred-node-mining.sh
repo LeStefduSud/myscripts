@@ -15,3 +15,32 @@ sudo chmod +x dcrinstall-linux-amd64-v1.8.0
 --on lance la commande d'activation du minage sur 8 thread par exemple
 /opt/decred/dcrctl setgenerate true 8
 /opt/decred/dcrctl getmininginfo.
+
+--Building an running the gominer sour ubuntu 23.04
+apt update
+apt upgrade
+sudo apt-get install nvidia-cuda-dev nvidia-cuda-toolkit build-essential btop screen git wget
+
+--Check cuda version : 
+nvcc --version
+
+--nstallation GO : 
+wget https://go.dev/dl/go1.21.1.linux-amd64.tar.gz
+sudo su
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+source $HOME/.profile
+go version
+
+--Clone an make
+git clone https://github.com/decred/gominer
+cd gominer
+make
+mv gominer /opt/decred
+/opt/decred/gominer --version
+
+--Lancer le node avec les info
+screen ../decred/dcrd --miningaddr=Dsau2BTh18vmRW9N6mC5P9GXe1jS32WaDCn --rpcuser="stef2001" --rpcpass="pwd" --notls
+
+--Lancer le miner en local
+screen /opt/decred/gominer --rpcuser="stef2001" --rpcpass="pwd" --notls
