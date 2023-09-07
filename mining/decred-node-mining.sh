@@ -42,5 +42,9 @@ mv gominer /opt/decred
 --Lancer le node avec les info
 screen ../decred/dcrd --miningaddr=Dsau2BTh18vmRW9N6mC5P9GXe1jS32WaDCn --rpcuser="stef2001" --rpcpass="pwd" --notls
 
+--on limite les power limit et en sauvant la persistance des données -pm
+sudo nvidia-smi -pm 1
+sudo nvidia-smi -pl 115
+
 --Lancer le miner en local
 screen /opt/decred/gominer --rpcuser="stef2001" --rpcpass="pwd" --notls
