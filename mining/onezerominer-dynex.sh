@@ -1,6 +1,6 @@
 #!/bin/sh
 # This script contains different command lines to install an run the differents version of the onezeroiner 
-# https://github.com/OneZeroMiner/onezerominer/releases/download/v1.1.3/onezerominer-linux-1.1.3.tar.gz
+# https://github.com/OneZeroMiner/onezerominer/releases/download/v1.2.4/onezerominer-linux-1.2.4.tar.gz
 # Use it as an example for my farm, composed in order of the graphic card NIVDIA 3080 FE
 
 #Setting the differents path and version
@@ -48,6 +48,6 @@ sudo chown user /opt/onezerominer/
 cd /opt/onezerominer/
 
 #Getting the last realease
-wget https://github.com/OneZeroMiner/onezerominer/releases/download/v1.1.3/onezerominer-linux-1.1.3.tar.gz
-tar -xzvf onezerominer-linux-1.1.3.tar.gz
+wget https://github.com/OneZeroMiner/onezerominer/releases/download/v1.2.4/onezerominer-linux-1.2.4.tar.gz
+tar -xzvf onezerominer-linux-1.2.4.tar.gz
 cd rigel-1.3.8-linux/
