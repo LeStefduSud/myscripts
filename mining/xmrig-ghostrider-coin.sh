@@ -3,12 +3,12 @@
 # it is always the same Parameters except teh pool and the mining adresse
 
 #  VarseChain on TazMining VarseShhain https://varsechain.com/ my Core Wallet VDB7tbv9qe6P8XTcY9hEfoWv2wZGYH55FA
-sudo /opt/xmrig/xmrig --algo ghostrider --url stratum+tcp://pool.tazmining.ch:5301 --donate-level 0 \
-	--threads=4 --user VDB7tbv9qe6P8XTcY9hEfoWv2wZGYH55FA
+sudo /opt/xmrig/xmrig -a gr -o stratum+tcp://pool.tazmining.ch:5301 --donate-level 0 \
+	-t 22 -u VDB7tbv9qe6P8XTcY9hEfoWv2wZGYH55FA.rig01
 
 #  ReactionCore on TazMining stratum+tcp://pool.tazmining.ch:5321
 sudo /opt/xmrig/xmrig -a gr -o stratum+tcp://pool.tazmining.ch:5321 --donate-level 0 \
-	-t=22 -u RqmMo9Z2EXm1Vq6uFk3Zhny5MMDJfZ74Nb.rig01-ubuntu
+	-t 22 -u RqmMo9Z2EXm1Vq6uFk3Zhny5MMDJfZ74Nb.rig01-ubuntu
 
 
 
