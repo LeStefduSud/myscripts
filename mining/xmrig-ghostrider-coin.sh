@@ -7,8 +7,8 @@ sudo /opt/xmrig/xmrig --algo ghostrider --url stratum+tcp://pool.tazmining.ch:53
 	--threads=4 --user VDB7tbv9qe6P8XTcY9hEfoWv2wZGYH55FA
 
 #  ReactionCore on TazMining stratum+tcp://pool.tazmining.ch:5321
-sudo /opt/xmrig/xmrig --algo ghostrider --url stratum+tcp://pool.tazmining.ch:5321 --donate-level 0 \
-	--threads=4 --user RqmMo9Z2EXm1Vq6uFk3Zhny5MMDJfZ74Nb
+sudo /opt/xmrig/xmrig -a gr -o stratum+tcp://pool.tazmining.ch:5321 --donate-level 0 \
+	-t=22 -u RqmMo9Z2EXm1Vq6uFk3Zhny5MMDJfZ74Nb.rig01-ubuntu
 
 
 
