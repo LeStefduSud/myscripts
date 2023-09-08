@@ -11,6 +11,7 @@ tar -xvf raptoreum-ubuntu22-1.3.17.04.tar.gz
 # Copy the raptoreum-qt binary to /usr/local/bin
 sudo cp raptoreum-ubuntu22-1.3.17.04/raptoreum-qt /usr/local/bin
 
+
 # Create a desktop file to create a launcher for the wallet
 cat <<EOF | sudo tee /usr/share/applications/raptoreum-qt.desktop
 [Desktop Entry]
