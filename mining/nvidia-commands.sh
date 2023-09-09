@@ -39,4 +39,14 @@ GPU clocks set to "(gpuClkMin 1500, gpuClkMax 1500)" for GPU 00000000:28:00.0
 $ sudo nvidia-smi -i 2 -lgc 1500
 $ GPU clocks set to "(gpuClkMin 1500, gpuClkMax 1500)" for GPU 00000000:28:00.0
 
-    
+
+#Setting Core lock to 2 cpu
+$ sudo nvidia-smi -i 0,1 -lgc 1650
+GPU clocks set to "(gpuClkMin 1650, gpuClkMax 1650)" for GPU 00000000:25:00.0
+GPU clocks set to "(gpuClkMin 1650, gpuClkMax 1650)" for GPU 00000000:27:00.0
+
+#Setting Mem Lock
+stef2001@rig01-ubuntu:~$ sudo nvidia-smi -lmc 6001
+Memory clocks set to "(memClkMin 6001, memClkMax 6001)" for GPU 00000000:25:00.0
+Memory clocks set to "(memClkMin 6001, memClkMax 6001)" for GPU 00000000:27:00.0
+Memory clocks set to "(memClkMin 6001, memClkMax 6001)" for GPU 00000000:28:00.0
