@@ -25,11 +25,14 @@ Sat Sep  9 13:54:13 2023
 +-----------------------------------------+----------------------+----------------------+
 
 #getting live info
-sudo nvidia-smi dmo
+sudo nvidia-smi dmon
 # gpu    pwr  gtemp  mtemp     sm    mem    enc    dec    jpg    ofa   mclk   pclk 
 # Idx      W      C      C      %      %      %      %      %      %    MHz    MHz 
     0    119     59      -    100      0      0      0      0      0   6800   1665 
     1    159     59      -    100      0      0      0      0      0   9251   1695 
+#Setting the GPU core Clock
+$ sudo nvidia-smi -i 2 -lgc 1500
+GPU clocks set to "(gpuClkMin 1500, gpuClkMax 1500)" for GPU 00000000:28:00.0
     2    219     74      -    100      0      0      0      0      0   9251   1695 
 
 #Setting power limit to all card
