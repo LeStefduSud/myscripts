@@ -32,5 +32,10 @@ sudo nvidia-smi dmo
     1    159     59      -    100      0      0      0      0      0   9251   1695 
     2    219     74      -    100      0      0      0      0      0   9251   1695 
 
+#Setting power limit to all card
+stef2001@rig01-ubuntu:~$ sudo nvidia-smi -pl 120
+[sudo] Mot de passe de stef2001 : 
+Power limit for GPU 00000000:25:00.0 was set to 120.00 W from 120.00 W.
+Power limit for GPU 00000000:27:00.0 was set to 120.00 W from 160.00 W.
+Power limit for GPU 00000000:28:00.0 was set to 120.00 W from 220.00 W.
 
-    
