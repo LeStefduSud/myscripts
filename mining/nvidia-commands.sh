@@ -25,7 +25,7 @@ Sat Sep  9 13:54:13 2023
 +-----------------------------------------+----------------------+----------------------+
 
 #getting live info
-sudo nvidia-smi dmon
+sudo nvidia-smi dmonn
 # gpu    pwr  gtemp  mtemp     sm    mem    enc    dec    jpg    ofa   mclk   pclk 
 # Idx      W      C      C      %      %      %      %      %      %    MHz    MHz 
     0    119     59      -    100      0      0      0      0      0   6800   1665 
@@ -35,10 +35,8 @@ $ sudo nvidia-smi -i 2 -lgc 1500
 GPU clocks set to "(gpuClkMin 1500, gpuClkMax 1500)" for GPU 00000000:28:00.0
     2    219     74      -    100      0      0      0      0      0   9251   1695 
 
-#Setting power limit to all card
-stef2001@rig01-ubuntu:~$ sudo nvidia-smi -pl 120
-[sudo] Mot de passe de stef2001 : 
-Power limit for GPU 00000000:25:00.0 was set to 120.00 W from 120.00 W.
-Power limit for GPU 00000000:27:00.0 was set to 120.00 W from 160.00 W.
-Power limit for GPU 00000000:28:00.0 was set to 120.00 W from 220.00 W.
+#Setting the GPU core Clock
+$ sudo nvidia-smi -i 2 -lgc 1500
+$ GPU clocks set to "(gpuClkMin 1500, gpuClkMax 1500)" for GPU 00000000:28:00.0
 
+    
