@@ -1,52 +1,52 @@
 #!/bin/sh
-# This script contains different command lines to install an run the differents version of the rigel Miner 
-# https://github.com/rigelminer/rigel
-# Use it as an example for my farm, composed in order of the graphic card AMD RX 5600XT, NIVDIA RTX 3060TI,NIVDIA RTX 3070TI,NIVDIA 3080 FE
+# This script contains different command lines to install an run the differents version of the rigel Miner
+# https://github.com/rigelminer/rigel for dual mining Radian+Zil
+# Use it as an example for my farm, composed in order of the graphic card NIVDIA RTX 3060TI,NIVDIA RTX 3070TI,NIVDIA 3080 FE
+# All is run from /opt/rigel
+# https://woolypooly.com/fr/coin/rxd/wallet/19uAzoGVeVVgfMD3i84EGKxe6vrLVgu6p6
 
 #Setting the differents path and version
-minerversion="1.3.8"
+minerversion="1.7.2"
 minername="rigel"
-minerfolder="/home/user/${minername}/${minername}-${minerversion}-linux/"
+minerfolder="/opt/rigel/"
 echo  "Going to directory ${minerfolder}"
-cd ${minerfolder}
+
 
 #Only the following command will be really executed
-#sudo ./rigel  -a kheavyhash -u kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp -w rig01 -o stratum+ssl://de.kaspa.herominers.com:1206 --cclock 210,255,255 --lock-cclock 1740,1680,1470 --lock-mclock 810 --pl 170,200,270
-ocs_kas1='--cclock 210,255,255 --lock-cclock 1740,1740,1740 --lock-mclock 810 --pl 170,200,270'
-ocs_kas1='--lock-cclock 1470,1470,1470 --lock-mclock 810 --cclock 300 --pl 170,200,270'
-ocs_kas1='--lock-cclock 1500,1500,1600 --lock-mclock 810 --cclock 450 --pl 170,200,270'
-ocs_kas1='--cclock 300,300,450 --lock-cclock 1500,1500,1600 --lock-mclock 810 --pl 170,200,270'
+#sudo /opt/rigel/rigel  -a kheavyhash -u kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp -w rig01 -o stratum+ssl://de.kaspa.herominers.com:1206 --cclock 210,255,255 --lock-cclock 1740,1680,1470 --lock-mclock 810 --pl 170,200,270
 
 
+# Radian + zil 
+# This is for my RTX 3080
+#--lock-cclock [2]1200 --lock-mclock [2]X --mclock [2]1000 \
+ocs_etc='--cclock 100,100,100 --lock-cclock 1200,1200,1200 --lock-mclock 8200,9200,9200 --mclock 100,100,100 --pl 125,150,190  --fan-control t:[_;95][70;70-99]'
 
-sudo ./rigel -a kheavyhash \
-    -u kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp -o stratum+ssl://de.kaspa.herominers.com:1206 \
-    -w rig01  \
-    $(echo $ocs_kas1)
+sudo /opt/rigel/rigel -a etchash\
+    -o stratum+ssl://eu.ezil.me:24443 \
+    -u 0xd46247E9BA7F1B9603Aa9B53Ab15cff9f3267397.zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 \
+    -w rig01manual --log-file /var/log/miner/rigel/rigel.log \
+    $(echo $ocs_etc)
 
 exit 0
 pause
 
 # Overclocking for Kaspa and my nvidia cards, 3060 Ti, 3070 Ti, 3080
 # Standarsd
---cclock 210,255,255 --lock-cclock 1740,1740,1740 --lock-mclock 810 --pl 170,200,270
+
 # Most efficien
 
 # Standard
-sudo ./rigel  -a kheavyhash -u kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp -w rig01 -o stratum+ssl://de.kaspa.herominers.com:1206 --cclock 210,255,255 --lock-cclock 1740,1680,1470 --lock-mclock 810 --pl 170,200,270
-
-
-
-
 #The following lines are not executed, there are only here to store and facilitate reuse of the script
 #Starting a named screen session to reattach it later quickly
-screen -S myminer
-screen -r myminer
 
-mkdir -p /optmyminer/rigel
-cd myminer/rigel
+mkdir -p /opt/rigel
+
 
 #Getting the last realease
-wget https://github.com/rigelminer/rigel/releases/download/1.3.8/rigel-1.3.8-linux.tar.gz
-tar -xzvf rigel-1.3.8-linux.tar.gz 
-cd rigel-1.3.8-linux/
+cd /tmp
+wget https://github.com/rigelminer/rigel/releases/download/1.7.2/rigel-1.7.2-linux.tar.gz
+tar -xzvf rigel-1.7.2-linux.tar.gz 
+mv rigel-1.3.10-linux/* /opt/rigel
+
+#Tempo flightsheet Kaspa+ZIl
+--cclock 300,300,450 --lock-cclock 1500,1500,1600 --lock-mclock 810 --pl 170,200,270 --no-tui
