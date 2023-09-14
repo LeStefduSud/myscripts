@@ -19,16 +19,19 @@ echo  "Going to directory ${minerfolder}"
 # Radian + zil 
 # This is for my RTX 3080
 #--lock-cclock [2]1200 --lock-mclock [2]X --mclock [2]1000 \
-ocs_etc='--cclock 100,100,100 --lock-cclock 1200,1200,1200 --lock-mclock 8200,9200,9200 --mclock 100,100,100 --pl 125,150,190  --fan-control t:[_;95][70;70-99]'
+ocs_rxd='--cclock 200 --lock-cclock 1450 --lock-mclock 810 --pl 200'
 
-sudo /opt/rigel/rigel -a etchash\
-    -o stratum+ssl://eu.ezil.me:24443 \
-    -u 0xd46247E9BA7F1B9603Aa9B53Ab15cff9f3267397.zil10ej64utfe2ueczp284xw28yp73nn97pa9j9cg6 \
-    -w rig01manual --log-file /var/log/miner/rigel/rigel.log \
-    $(echo $ocs_etc)
+sudo /opt/rigel/rigel -a sha512256d\
+    -o stratum+tcp://pool.eu.woolypooly.com:3122 \
+    -u 19uAzoGVeVVgfMD3i84EGKxe6vrLVgu6p6 \
+    -w rig01-ubuntu --log-file /var/log/miner/rigel/rigel.log \
+    $(echo $ocs_rxd)
 
 exit 0
 pause
+
+
+-a  -o stratum+tcp://pool.eu.woolypooly.com:3122 -u 1HMCKiujKRrHAnr9aHECrMzTeNe1bseKqa -w WORKER --no-tui --api-bind 127.0.0.1:5000 
 
 # Overclocking for Kaspa and my nvidia cards, 3060 Ti, 3070 Ti, 3080
 # Standarsd
