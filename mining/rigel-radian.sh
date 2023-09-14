@@ -17,7 +17,7 @@ echo  "Going to directory ${minerfolder}"
 
 
 # Radian + zil 
-# This is for my RTX 3080
+# This is for my RTX 3080 only
 ocs_rxd='--cclock 200 --lock-cclock 1450 --lock-mclock 810 --pl 200 -d 2'
 
 sudo /opt/rigel/rigel -a sha512256d\
