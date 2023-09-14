@@ -24,8 +24,7 @@ sudo /opt/rigel/rigel -a sha512256d\
     -o stratum+tcp://pool.eu.woolypooly.com:3122 \
     -u 19uAzoGVeVVgfMD3i84EGKxe6vrLVgu6p6 \
     -w rig01-ubuntu --log-file /var/log/miner/rigel/rigel.log \
-    -d 2
-    $(echo $ocs_rxd)
+    -d 2  $(echo $ocs_rxd)
 
 #full line to launch
 sudo /opt/rigel/rigel -a sha512256d -o stratum+tcp://pool.eu.woolypooly.com:3122 -u 19uAzoGVeVVgfMD3i84EGKxe6vrLVgu6p6 -w rig01-ubuntu --log-file /var/log/miner/rigel/rigel.log --cclock 200 --lock-cclock 1450 --lock-mclock 810 --pl 200
