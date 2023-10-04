@@ -5,13 +5,15 @@
 /opt/bzminer/bzminer -a decred -w 0000 -p https://127.0.0.1:9109 -r stef2001 --pool_password stef2001 --nc 1 --oc_fan_speed 60 --oc_power_limit 125 --oc_core_clock_offset 300 --oc_lock_core_clock 1500 --oc_memory_clock_offset 0 --oc_lock_memory_clock 810 --enable 0 1
 
 
+exit 0
+pause
 
 
 
 #Only the following command will be really executed
 #sudo ./bzminer  -a kheavyhash -u kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp -w rig01 -o stratum+ssl://de.kaspa.herominers.com:1206 --cclock 210,255,255 --lock-cclock 1740,1680,1470 --lock-mclock 810 --pl 170,200,270
-ocsbz='--oc_fan_speed 60 --oc_power_limit 125 --oc_core_clock_offset 1500 --oc_lock_core_clock 300 --oc_memory_clock_offset 0 --oc_lock_memory_clock 810'
-ocs_kas1='--oc_lock_core_clock 1470 1470 1470 --oc_lock_memory_clock 810  --oc_power_limit 170 200 270'
+ocsbz='--oc_power_limit 125 --oc_core_clock_offset 300 --oc_lock_core_clock 1500 --oc_memory_clock_offset 0 --oc_lock_memory_clock 810 --enable 0 1 --oc_fan_speed 60'
+
 
 sudo ./bzminer -a kaspa \
     -w kaspa:qq5xqy7u940dw9d9vnpey4pm9vuvkhl2x3e2kf225auwleh2u02vxffh5rmmp -p stratum+ssl://de.kaspa.herominers.com:1206 \
