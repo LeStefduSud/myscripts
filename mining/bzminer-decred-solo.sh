@@ -2,7 +2,7 @@
 # This script contains different command lines to mine Decred in Solo using Bzminer
 
 #full command line for mining solo on the local node
-/opt/bzminer/bzminer -a decred -w 0000 -p https://127.0.0.1:9109 -r stef2001 --pool_password stef2001 --nc 1 --oc_fan_speed 60 --oc_power_limit 125 --oc_core_clock_offset 1500 --oc_lock_core_clock 300 --oc_memory_clock_offset 0 --oc_lock_memory_clock 810 --enable 0 1
+/opt/bzminer/bzminer -a decred -w 0000 -p https://127.0.0.1:9109 -r stef2001 --pool_password stef2001 --nc 1 --oc_fan_speed 60 --oc_power_limit 125 --oc_core_clock_offset 300 --oc_lock_core_clock 1500 --oc_memory_clock_offset 0 --oc_lock_memory_clock 810 --enable 0 1
 
 
 
