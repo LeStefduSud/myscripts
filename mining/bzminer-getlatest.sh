@@ -12,6 +12,10 @@ mv /opt/bzminer/bzminer_v17.0.0_linux/* /opt/bzminer
 
 
 
+
+
+
+
 #Setting the differents path and version
 minerversion="v13.4.0"
 minername="bzminer"
