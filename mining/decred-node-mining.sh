@@ -26,7 +26,7 @@ $ dcrd -V  ou /root/
 --redemarrage du node en précisant l'adresse de minage (ici sur mon adresse trustwallet)
 ---/opt/decred/dcrd --miningaddr=Dsau2BTh18vmRW9N6mC5P9GXe1jS32WaDCn
 --Lancer le node avec les info
-/root/go/bin/dcrd --miningaddr=Dsau2BTh18vmRW9N6mC5P9GXe1jS32WaDCn --rpcuser="stef2001" --rpcpass="pwd" --notls
+/root/go/bin/dcrd --miningaddr=Dsau2BTh18vmRW9N6mC5P9GXe1jS32WaDCn --rpcuser="stef2001" --rpcpass="stef2001" --rpclisten="0.0.0.0:9109"
 
 
 
