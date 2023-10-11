@@ -1,8 +1,10 @@
-# This file is a simple reminder of the XMRIG configuration sections in the FlightSheet
-# It can be used to fine Tune CPU Affinity for example, when dual mining on CPU
-# And It is always reased when you change the Pool in the FS tab
+## This file is a simple reminder of the XMRIG configuration sections in the FlightSheet
+
+It can be used to fine Tune CPU Affinity for example, when dual mining on CPU
+And It is always reased when you change the Pool in the FS tab
 
 ## Section CPU configuration:
+
 "cpu": {
   "huge-pages": true,
   "hw-aes": null,
@@ -14,5 +16,6 @@
 }
 
 ## Section Extra Arguments
+
 "randomx": { "1gb-pages": true }
 "donate-level": 1
