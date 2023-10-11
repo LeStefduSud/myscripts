@@ -17,5 +17,7 @@ And It is always reased when you change the Pool in the FS tab
 
 ##### Section Extra Arguments
 
-*"randomx": { "1gb-pages": true }
-*"donate-level": 1
+"randomx": { "1gb-pages": true }
+"donate-level": 1
+
+**Feel free to copy/use**
