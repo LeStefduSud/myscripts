@@ -33,7 +33,7 @@ Lancer le miner GPU:
 #Setting OC and launching Miner
 
 nvtool --setmem 5001 --setcore 1480 --setcoreoffset 270     directement dans le shell de hiveos , j ai des 3060ti
-/opt/karlsen-miner/karlsen-miner --mining-address karlsen:qrv820ag2wv5208p0acxxl0j0tu4hh4sp7q9hdrk88edwp7nn2ekgljcmly4t  -s ubuntu-worker02.lan
+/opt/karlsen-miner/karlsen-miner --mining-address karlsen:qrv820ag2wv5208p0acxxl0j0tu4hh4sp7q9hdrk88edwp7nn2ekgljcmly4t  -s ubuntu-worker02.lan --port 42110
 
 En cas d'erreur 
 enleve la commande screen pour pouvoir voir l'erreur.
