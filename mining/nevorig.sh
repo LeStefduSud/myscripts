@@ -1,0 +1,53 @@
+#!/bin/sh
+# Build latest custom NevoRig miner for mining Nevo coi
+#https://github.com/nevocoin/NEVORig/archive/refs/tags/v6.20.0.tar.gz
+# wget -O - https://raw.githubusercontent.com/LeStefduSud/myscripts/main/mining/nevo.sh | sudo bash
+# sudo chown user /opt/
+# mkdir -p /opt/nevorig
+
+# My Nebo Adress on Xegegd
+NS27Dr6wxBxZbjFLk7Dx6iSqiTPcaaqWWMT3coVTzUfXCWL1uiRubAoC2FqY22p4gjZYARRDJXVkt3CoiEgWk4Bv2cqNuTfrU
+
+echo "This script will try to build the latest version of xmrig from GitHub"
+echo "More build instruction can be found at https://xmrig.com/docs/miner/build/ubuntu"
+echo "Start at $(date)"
+DEST=/opt/nevorig/
+
+#--url randomx.rplant.xyz:17102 --tls 
+#./xmrig -k -a rx/nevo -o nevo.kilopool.com:3333 -u Ne3HWUrAxjWQH7YeHFaxWf3ekWTMazyzxXi2eoKuu36Sdis3DRP4nd3HotEJo9L1897EsSZkXMsjvKwpZtAtUGAF2UuBTnpPU -p Mine5 -t 20
+
+#starting 
+sudo/opt/nevorig/xmrig -a rx/nevo \
+  -o randomx.rplant.xyz:17102 --donate-level 0  --threads=24\
+  -u NS27Dr6wxBxZbjFLk7Dx6iSqiTPcaaqWWMT3coVTzUfXCWL1uiRubAoC2FqY22p4gjZYARRDJXVkt3CoiEgWk4Bv2cqNuTfrU \ 
+  -k -p rig-worker01
+
+
+echo "Getting stuff for building"
+apt-get update
+apt-get install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+apt-get autoremove
+
+echo "Getting the last version from GitHub and building"
+rm -Rvf /tmp/xmrig
+cd /tmp
+git clone https://github.com/nevocoin/NEVORig/archive/refs/tags/v6.20.0.tar.gz
+mkdir xmrig/build && cd xmrig/build
+cmake ..
+make -j$(nproc)
+
+#If the new file have been generated, copying
+FILE=/tmp/xmrig/build/xmrig
+if [ -f "$FILE" ]; then
+    echo "$FILE exists, build has succeeded."
+    cp "$FILE" "$DEST"
+    chmod +x "$DEST"
+else 
+    echo "$FILE does not exist, build have failed"
+fi
+echo "End   at $(date)"
+
+echo "Restarting XMrig"
+killall -q - w xmrig
+cd /opt/xmrig
+./xmrig -V
