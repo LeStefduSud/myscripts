@@ -5,22 +5,18 @@
 # sudo chown user /opt/
 # mkdir -p /opt/nevorig
 
-# My Nebo Adress on Xegegd
-NS27Dr6wxBxZbjFLk7Dx6iSqiTPcaaqWWMT3coVTzUfXCWL1uiRubAoC2FqY22p4gjZYARRDJXVkt3CoiEgWk4Bv2cqNuTfrU
+# My Nebo Adress on XeggeX NS27Dr6wxBxZbjFLk7Dx6iSqiTPcaaqWWMT3coVTzUfXCWL1uiRubAoC2FqY22p4gjZYARRDJXVkt3CoiEgWk4Bv2cqNuTfrU
 
 echo "This script will try to build the latest version of xmrig from GitHub"
 echo "More build instruction can be found at https://xmrig.com/docs/miner/build/ubuntu"
 echo "Start at $(date)"
 DEST=/opt/nevorig/
 
-#--url randomx.rplant.xyz:17102 --tls 
-#./xmrig -k -a rx/nevo -o nevo.kilopool.com:3333 -u Ne3HWUrAxjWQH7YeHFaxWf3ekWTMazyzxXi2eoKuu36Sdis3DRP4nd3HotEJo9L1897EsSZkXMsjvKwpZtAtUGAF2UuBTnpPU -p Mine5 -t 20
+#starting Mining in Rplant
+sudo /opt/nevorig/xmrig -a rx/nevo -o randomx.rplant.xyz:17102 --donate-level 0  --threads=23  -u NS27Dr6wxBxZbjFLk7Dx6iSqiTPcaaqWWMT3coVTzUfXCWL1uiRubAoC2FqY22p4gjZYARRDJXVkt3CoiEgWk4Bv2cqNuTfrU   -k -p rig-worker01
 
-#starting 
-sudo/opt/nevorig/xmrig -a rx/nevo \
-  -o randomx.rplant.xyz:17102 --donate-level 0  --threads=24\
-  -u NS27Dr6wxBxZbjFLk7Dx6iSqiTPcaaqWWMT3coVTzUfXCWL1uiRubAoC2FqY22p4gjZYARRDJXVkt3CoiEgWk4Bv2cqNuTfrU \ 
-  -k -p rig-worker01
+
+
 
 
 echo "Getting stuff for building"
