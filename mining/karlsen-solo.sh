@@ -12,7 +12,7 @@ Attendre la sycnhro complete
 
 ctrl a+d
 
-#02-Creating a Wallet
+#02-Creating a Wallet , attention le Daemon du wallet doit tourner et c'est bien APRES le new-adress qu'on a une adress valide
 cd /opt/karlsend
 ./karlsenwallet create
 ./karlsenwallet start-daemon
@@ -35,6 +35,10 @@ Lancer le miner GPU:
 
 sudo nvtool --setmem 5001 --setcore 1480 --setcoreoffset 200     directement dans le shell de hiveos , j ai des 3060ti
 /opt/karlsen-miner/karlsen-miner --mining-address karlsen:qpmrrhwj0ph2vezz0dscgrjtd05fywen7cluagm23m9eg2d2z8lkj3f0z56va -s ubuntu-worker02.lan --port 42110
+
+#en une seul ligne 
+sudo nvtool --setmem 5001 --setcore 1500 --setcoreoffset 250 --setpl 150  && /opt/karlsen-miner/karlsen-miner --mining-address karlsen:qpmrrhwj0ph2vezz0dscgrjtd05fywen7cluagm23m9eg2d2z8lkj3f0z56va -s ubuntu-worker02.lan --port 42110 
+
 
 En cas d'erreur 
 enleve la commande screen pour pouvoir voir l'erreur.
