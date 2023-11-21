@@ -1,11 +1,14 @@
 # Mining on olo 
 # https://discord.com/channels/1024124284513308673/1175607307112026172/1175618025014165544  lien discord 
 
-Voila la liste des commandes en avance sous UBUNTU 22 : 
+#Installing the Node on a Ubuntu
+#Voila la liste des commandes en avance sous UBUNTU 22 : 
+#Pensez a désactiver TOUS les parefeu sur le pot 42121
 mkdir karlsen && cd karlsen && wget https://github.com/karlsen-network/karlsend/releases/download/v1.0.0/karlsend-v1.0.0-linux.zip && unzip karlsend-v1.0.0-linux.zip
 chmod +x *
 screen ./karlsend --utxoindex
 Attendre la sycnhro complete
+
 ctrl a+d
 ./karlsenwallet create
 ./karlsenwallet start-daemon
