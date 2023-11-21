@@ -15,6 +15,9 @@ DEST=/opt/nevorig/
 #starting Mining in Rplant
 sudo /opt/nevorig/xmrig -a rx/nevo -o randomx.rplant.xyz:17102 --donate-level 0  --threads=23  -u NS27Dr6wxBxZbjFLk7Dx6iSqiTPcaaqWWMT3coVTzUfXCWL1uiRubAoC2FqY22p4gjZYARRDJXVkt3CoiEgWk4Bv2cqNuTfrU   -k -p rig-worker01
 
+#starting Mining in https://minergalaxy.eu/
+sudo /opt/nevorig/xmrig -a rx/nevo -o  161.97.82.235:1311 --donate-level 0  --threads=24 -u NS27Dr6wxBxZbjFLk7Dx6iSqiTPcaaqWWMT3coVTzUfXCWL1uiRubAoC2FqY22p4gjZYARRDJXVkt3CoiEgWk4Bv2cqNuTfrU   -k -p rig-worker01
+
 
 
 
