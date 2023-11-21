@@ -6,7 +6,7 @@
 #Pensez a désactiver TOUS les parefeu sur le pot 42121
 mkdir karlsen && cd karlsen && wget https://github.com/karlsen-network/karlsend/releases/download/v1.0.0/karlsend-v1.0.0-linux.zip && unzip karlsend-v1.0.0-linux.zip
 chmod +x *
-screen ./karlsend --utxoindex
+/opt/karlsend/karlsend --utxoindex
 Attendre la sycnhro complete
 
 
