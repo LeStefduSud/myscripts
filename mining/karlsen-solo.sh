@@ -16,10 +16,10 @@ ctrl a+d
 cd /opt/karlsend
 ./karlsenwallet create
 ./karlsenwallet start-daemon
-./karlsenwallet new-address
+./karlsenwallet new-addresse
 
 #Chope ton adresse. Voila la mienne.
-karlsen:kpub2Jx9R7KACGVTTRJdeGw3QodFArsEPMpGBLtrfGS3eSTHXUY6Lp3xRE7GZa7E3Ff2dC63dF7Peec8RUXZ5Jgw6RHd3EPnCirVYWPsrS93LuT
+karlsen:qpmrrhwj0ph2vezz0dscgrjtd05fywen7cluagm23m9eg2d2z8lkj3f0z56va
 Sauvegarde le fichier keys.json dans le rep .karlsen de ton user
 
 #03-Installer et lancer le Miner GPU, sous Hive OS
@@ -34,7 +34,7 @@ Lancer le miner GPU:
 #Setting OC and launching Miner
 
 sudo nvtool --setmem 5001 --setcore 1480 --setcoreoffset 200     directement dans le shell de hiveos , j ai des 3060ti
-/opt/karlsen-miner/karlsen-miner --mining-address karlsen:kpub2Jx9R7KACGVTTRJdeGw3QodFArsEPMpGBLtrfGS3eSTHXUY6Lp3xRE7GZa7E3Ff2dC63dF7Peec8RUXZ5Jgw6RHd3EPnCirVYWPsrS93LuT -s ubuntu-worker02.lan --port 42110
+/opt/karlsen-miner/karlsen-miner --mining-address karlsen:qpmrrhwj0ph2vezz0dscgrjtd05fywen7cluagm23m9eg2d2z8lkj3f0z56va -s ubuntu-worker02.lan --port 42110
 
 En cas d'erreur 
 enleve la commande screen pour pouvoir voir l'erreur.
