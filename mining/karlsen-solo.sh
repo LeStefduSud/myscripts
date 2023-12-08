@@ -21,7 +21,7 @@ cd /opt/karlsend
 #Chope ton adresse. Voila la mienne.
 karlsen:qpmrrhwj0ph2vezz0dscgrjtd05fywen7cluagm23m9eg2d2z8lkj3f0z56va
 
-#Mon adresse sur Excgane
+#Mon adresse sur l'echange du sgeg
 karlsen:qzk23gcq09g9qytqcg9ys4x72hqxltyrkfvwmuk5ugt53utmklx7y430jqnaq
 Sauvegarde le fichier keys.json dans le rep .karlsen de ton user
 
