@@ -25,6 +25,9 @@ karlsen:qpmrrhwj0ph2vezz0dscgrjtd05fywen7cluagm23m9eg2d2z8lkj3f0z56va
 karlsen:qzk23gcq09g9qytqcg9ys4x72hqxltyrkfvwmuk5ugt53utmklx7y430jqnaq
 Sauvegarde le fichier keys.json dans le rep .karlsen de ton user
 
+#pour envoyer de Kls sur le sgef
+/opt/karlsend/karlsenwallet -t karlsen:qzk23gcq09g9qytqcg9ys4x72hqxltyrkfvwmuk5ugt53utmklx7y430jqnaq -v 5
+
 #03-Installer et lancer le Miner GPU, sous Hive OS
 
 sudo nvtool --setmem 5001 --setcore 1480 --setcoreoffset 200     directement dans le shell de hiveos , j ai des 3060ti
