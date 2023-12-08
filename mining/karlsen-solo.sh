@@ -26,7 +26,7 @@ karlsen:qzk23gcq09g9qytqcg9ys4x72hqxltyrkfvwmuk5ugt53utmklx7y430jqnaq
 Sauvegarde le fichier keys.json dans le rep .karlsen de ton user
 
 #pour envoyer de Kls sur le sgef
-/opt/karlsend/karlsenwallet -t karlsen:qzk23gcq09g9qytqcg9ys4x72hqxltyrkfvwmuk5ugt53utmklx7y430jqnaq -v 5
+/opt/karlsend/karlsenwallet send --to-address karlsen:qzk23gcq09g9qytqcg9ys4x72hqxltyrkfvwmuk5ugt53utmklx7y430jqnaq --send-amount 5
 
 #03-Installer et lancer le Miner GPU, sous Hive OS
 
