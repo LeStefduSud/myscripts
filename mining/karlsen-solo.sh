@@ -20,18 +20,12 @@ cd /opt/karlsend
 
 #Chope ton adresse. Voila la mienne.
 karlsen:qpmrrhwj0ph2vezz0dscgrjtd05fywen7cluagm23m9eg2d2z8lkj3f0z56va
+
+#Mon adresse sur Excgane
+karlsen:qzk23gcq09g9qytqcg9ys4x72hqxltyrkfvwmuk5ugt53utmklx7y430jqnaq
 Sauvegarde le fichier keys.json dans le rep .karlsen de ton user
 
 #03-Installer et lancer le Miner GPU, sous Hive OS
-Lancer le miner GPU: 
- 
-2 - mkdir /opt/karlsen-miner
-3 - cd /opt/karlsen-miner
-4 - wget https://www.calabianca.fr/miner.zip
-5 - unzip miner.zip
-6 - chmod +x karlsen-miner
-
-#Setting OC and launching Miner
 
 sudo nvtool --setmem 5001 --setcore 1480 --setcoreoffset 200     directement dans le shell de hiveos , j ai des 3060ti
 /opt/karlsen-miner/karlsen-miner --mining-address karlsen:qpmrrhwj0ph2vezz0dscgrjtd05fywen7cluagm23m9eg2d2z8lkj3f0z56va -s ubuntu-worker02.lan --port 42110
