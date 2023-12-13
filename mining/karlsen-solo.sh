@@ -28,6 +28,10 @@ Sauvegarde le fichier keys.json dans le rep .karlsen de ton user
 #pour envoyer de Kls sur le sgef
 /opt/karlsend/karlsenwallet send --to-address karlsen:qzk23gcq09g9qytqcg9ys4x72hqxltyrkfvwmuk5ugt53utmklx7y430jqnaq --send-amount 8.3
 
+#Adresse sur mon WebWallet
+karlsen:qzcmsnq9lnsx7wav85ac98t0decd8tx0nu8nehjv695xnd79cwa5g2esmla9y
+/opt/karlsend/karlsenwallet send --to-address karlsen:qzcmsnq9lnsx7wav85ac98t0decd8tx0nu8nehjv695xnd79cwa5g2esmla9y --send-amount 10
+
 #03-Installer et lancer le Miner GPU, sous Hive OS
 
 sudo nvtool --setmem 5001 --setcore 1480 --setcoreoffset 200     directement dans le shell de hiveos , j ai des 3060ti
