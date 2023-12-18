@@ -13,9 +13,14 @@ cd /opt/Warthog/build/src/node/
 
 #Dipslay the public adress, and this is my public adress of my node
 /opt/Warthog/build/src/wallet/wart-wallet -a
+#My node public adress
+4af9ccf834a941af6869e8bf3ef020a74aa381161fb7f3b1
 
 #Building and starting the Jasmine MIner
 #https://github.com/CoinFuMasterShifu/janusminer
+#You will need maybe to install OpenCl dev lib
+sudo apt install ocl-icd-opencl-dev
+
 
 #building an once building launch it with OC
 
