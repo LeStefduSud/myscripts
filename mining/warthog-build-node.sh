@@ -1,5 +1,5 @@
 #!/bin/sh
-# wget -O - https://raw.githubusercontent.com/LeStefduSud/myscripts/main/mining/warthog-build-node.sh | sudo bash
+# sudo wget -O - https://raw.githubusercontent.com/LeStefduSud/myscripts/main/mining/warthog-build-node.sh | sudo bash
 # sudo chown stef2001 /opt/
 # mkdir -p /opt/xmrig
 
