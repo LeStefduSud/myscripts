@@ -1,5 +1,9 @@
 #!/bin/sh
 # This script is for starting mining warthod
+echo "Killing Warhhog-miner with OC"
+sleep 5
+killall -v wart-miner
+sleep 5
 echo "Starting Warhhog-miner with OC"
 /usr/bin/nvidia-smi -pm 1 
 /usr/bin/nvidia-smi -lgc 1500 
