@@ -31,7 +31,7 @@ meson build --buildtype=release
 cd build
 ninja
 echo "Build Complete for version"
-/opt/Warthog/build/src/node/wart-node
+/opt/Warthog/build/src/node/wart-node -V
 echo "End  at $(date)"
 
 echo "Restarting the node"
