@@ -29,6 +29,9 @@ cd /opt
 rm -Rvf janusminer
 git clone https://github.com/CoinFuMasterShifu/janusminer
 cd janusminer
+# Checkinging ou a specific Commit if necessary
+# The full URL is https://github.com/CoinFuMasterShifu/janusminer/commit/6b2d03f00468e02f56f52eaa2714d7f9ee7ac2f3
+git checkout 6b2d03f
 meson build --buildtype=release
 cd build
 ninja
