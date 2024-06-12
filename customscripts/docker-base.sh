@@ -28,3 +28,5 @@ sudo docker run hello-world
 VERSION="1.21.4" && wget -q "https://golang.org/dl/go${VERSION}.linux-amd64.tar.gz" -O go.tar.gz && sudo tar -C /usr/local -xzf go.tar.gz && echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile && source ~/.profile && go version
 
 #Installing some cool stuff to manage docker
+#https://github.com/jesseduffield/lazydocker
+go install github.com/jesseduffield/lazydocker@latest
