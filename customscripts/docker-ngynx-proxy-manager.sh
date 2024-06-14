@@ -1,6 +1,6 @@
 #Creating a dir and editing the docker-compose.yml file
-mkdir -p .pi./ngynx-proxy-mananger
-cd ngynx-proxy-mananger/
+#mkdir -p /docker-ngynx-proxy-manager
+#cd docker-ngynx-proxy-manager/
 nano docker-compose.yml
 
 #Us the basic config infomartion
