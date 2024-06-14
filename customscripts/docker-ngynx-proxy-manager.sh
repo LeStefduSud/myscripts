@@ -3,23 +3,18 @@
 #cd docker-ngynx-proxy-manager/
 nano docker-compose.yml
 
-#Us the basic config infomartion
-Version: 3
-services: 
-  app:    
-  image: 'jc21/nginx-proxy-manager:latest'    
-  container-name: proxy-manager    
-  restart: unless-stopped    
-  ports:
-      - '80:80' 
-      – '81:81'      
-      - '443:443'    
-  volumes:
-    – ./data:/data
-    – ./passencryption:/etc/talencrypt
-volumes:  
-    data:  
-    letsencrypt:
+#Put the basic config infomartion for a miminal setup
+services:
+  app:
+    image: 'docker.io/jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
 
 #Save the file
 #Starting the composed stack in background
