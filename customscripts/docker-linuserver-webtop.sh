@@ -9,3 +9,29 @@ mkdir -p docker-webtop
 nano compose.yml
 
 #Paste the following information in the file (tweak as needed)
+services:
+  webtop:
+    image: lscr.io/linuxserver/webtop:ubuntu-xfce
+    container_name: webtop
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+      - TITLE=webtop #optional name of the docker image
+      - CUSTOM_USER=myuser
+      - PASSWORD=mypassword
+    volumes:
+      - /path/to/data:/config
+      - /var/run/docker.sock:/var/run/docker.sock #optional
+    ports:
+      - 3000:3000
+      - 3001:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+    #Save it
+    #Launch docker compose up in background
+    docker compose up -d
+
+    #you
+    
