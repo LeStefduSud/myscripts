@@ -6,7 +6,8 @@
 # Once the system has booted, we end up in the command line to start the installation, because everything is actually done on the command line (light command).
 #For installing on a VM Server I use https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-virt-3.20.1-x86_64.iso
 
-#Simply login with default user (root or even enter)
+# STEP 01 : installing the BAS System
+# Simply login with default user (root or even enter)
 #Launch the setup process.
 setup-alpine
 #Choose the keymap (FR or what you want) and the variant.
@@ -40,3 +41,17 @@ y
 #The process will format entirely the disk, it can take a while.
 #then type Reboot as asked to restart the new system.
 reboot
+
+#STEP 02 : installaling DOCKER engine
+#As root use :qw to exit (on azerty it SHIFT+; za)
+Vi /etc/apk/repositories
+
+#It should look like this (the exact URLs will vary according to your selected mirror).
+#A way the community line
+http://dl-cdn-alplinelinux.org/alpine/v3.19/main
+http://ftp.halifax.rwth-aachen.de/alpine/v3.19/community
+
+#Exit VI, saving the file, typing EC and :wq 
+#Update the new package.
+apk update
+apk upgrade
