@@ -42,16 +42,57 @@ y
 #then type Reboot as asked to restart the new system.
 reboot
 
-#STEP 02 : installaling DOCKER engine
+#STEP 02 : updatinf repository to access additonnal package
 #As root use :qw to exit (on azerty it SHIFT+; za)
 Vi /etc/apk/repositories
 
 #It should look like this (the exact URLs will vary according to your selected mirror).
 #A way the community line
-http://dl-cdn-alplinelinux.org/alpine/v3.19/main
-http://ftp.halifax.rwth-aachen.de/alpine/v3.19/community
+http://dl-cdn-alplinelinux.org/alpine/v3.20/main
+http://ftp.halifax.rwth-aachen.de/alpine/v3.20/community
 
 #Exit VI, saving the file, typing EC and :wq 
 #Update the new package.
 apk update
 apk upgrade
+
+#STEP 03 : installing et setting up usefull things
+#Adding a user and setting up to ssh
+adduser -D lestefdusud
+passwd lestefdud
+
+#Allowinf to connect it to ssh with password
+nano /etc/ssh/sshd_config
+PermitRootLogin no
+PasswordAuthentication yes
+
+#Connected as root, add Doas (it might be necessary)
+apk add doas 
+echo 'permit: wheel'  /etc/doas.d/doas.conf 
+echo 'permit lestefdusud as root' >> /etc/doas.d/doas.conf 
+
+
+#Adding the user to the wheel group
+Adding myuser -G wheel 
+#You need to logout my user and login again.
+#You can now access the root command without root.
+
+#STEP 04 : installing docker an other stuff
+#Install docker and docker-compose using
+doas apk add docker docker-compose
+
+#Start - enable dockcker service at boot
+doas rc-update add docker default
+doas usermod -aG docker lestefdusud
+doas rc-service docker restart
+
+#Start the docker service by running the below command
+doas /etc/init.d/docker start
+#/var/log/docker.log: creating file
+#/var/log/docker.log: correcting owner
+#Starting Docker daemon...
+
+#Testing if all is OK.
+docker run hello-world
+#If you get the simple message "Hello-World" in the console... everything is OK.
+
