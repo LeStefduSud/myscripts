@@ -80,6 +80,8 @@ Adding myuser -G wheel
 #STEP 04 : installing docker an other stuff
 #Install docker and docker-compose using
 doas apk add docker docker-compose
+doas apk add go tmux 
+
 
 #Start - enable dockcker service at boot
 doas rc-update add docker default
