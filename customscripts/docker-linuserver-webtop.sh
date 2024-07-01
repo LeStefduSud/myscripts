@@ -4,6 +4,10 @@
 # More information on my post My Personal https://medium.com/@lestefdusud/my-personal-free-webtop-in-5-minutes-383040f12666
 # Or on official doc https://medium.com/@lestefdusud/my-personal-free-webtop-in-5-minutes-383040f12666
 
+
+
+
+
 #Creating the environnement
 mkdir -p docker-webtop
 nano compose.yml
@@ -35,3 +39,14 @@ services:
 
     #you
     
+    #Testing different parameters using command line
+docker run --rm --name=webtop \
+  --security-opt seccomp=unconfined \
+  -e TZ=Etc/UTC -e TITLE=Webtop \
+  -p 3000:3000 -p 3001:3001 \
+  -e CUSTOM_USER=myuser -e PASSWORD=mypassword
+  -v /path/to/data:/config \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  --device /dev/dri:/dev/dri  \
+  --shm-size="1gb" `#optional` \
+  lscr.io/linuxserver/webtop:latest
