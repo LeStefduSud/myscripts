@@ -56,12 +56,9 @@ docker run --rm --name=webtop \
 #Ubuntu XFCE
 docker run --rm --name=webtop \
   --security-opt seccomp=unconfined \
-  -e TZ=Etc/UTC -e TITLE=Webtop \
-  -p 3000:3000 -p 3001:3001 \
-  -v /path/to/data:/config \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  --device /dev/dri:/dev/dri  \
-  --shm-size="1gb" `#optional` \
-  lscr.io/linuxserver/webtop:debian-openbox
+  -e TZ=Etc/UTC -e TITLE=Webtop -p 3000:3000 -p 3001:3001 \
+  -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
+  --device /dev/dri:/dev/dri  --shm-size="1gb" \
+  lscr.io/linuxserver/webtop:ubuntu-xfce
 
-  alpine-openbox debian-openbox
+  alpine-openbox debian-openbox ubuntu-xfce
