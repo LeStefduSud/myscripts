@@ -54,9 +54,10 @@ docker run --rm --name=webtop \
 
 #Testing different parameters using command line
 #Ubuntu XFCE
-docker run --rm --name=webtop \
-  --security-opt seccomp=unconfined \
-  -e TZ=Etc/UTC -e TITLE=Webtop -p 3000:3000 -p 3001:3001 \
+docker run -d --name=webtop \
+  --security-opt seccomp=unconfined --restart: unless-stopped \
+  -e LC_ALL=fr_FR.UTF-8 \
+  -e TZ=Europe/Paris -e TITLE=Webtop -p 3000:3000 -p 3001:3001 \
   -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
   --device /dev/dri:/dev/dri  --shm-size="1gb" \
   lscr.io/linuxserver/webtop:ubuntu-xfce
