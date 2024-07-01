@@ -19,3 +19,7 @@ services:
 #Save the file
 #Starting the composed stack in background
 docker-compose up -d
+docker compose up -d
+
+docker compose logs
+
