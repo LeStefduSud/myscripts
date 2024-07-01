@@ -62,4 +62,6 @@ docker run --rm --name=webtop \
   -v /var/run/docker.sock:/var/run/docker.sock \
   --device /dev/dri:/dev/dri  \
   --shm-size="1gb" `#optional` \
-  lscr.io/linuxserver/webtop:alpine-mate
+  lscr.io/linuxserver/webtop:debian-openbox
+
+  alpine-openbox debian-openbox
