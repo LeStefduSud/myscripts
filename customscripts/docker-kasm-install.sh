@@ -15,3 +15,17 @@ cd /tmp
 curl -O https://kasm-static-content.s3.amazonaws.com/kasm_release_1.14.0.3a7abb.tar.gz
 tar -xf kasm_release_1.14.0.3a7abb.tar.gz
 sudo bash kasm_release/install.sh -L 9443
+
+# Using Proot-apps to install without privilege and persistance application
+proot-apps install gui
+
+# Defining sudo on a Ubuntu container
+Modify the Docker Exec Config field to include the following example of installing sudo and configuring sudo to not require a password.
+{
+ "first_launch":{
+      "user":"root",
+      "cmd":"bash -c 'apt-get update && apt-get install -y sudo && echo \"kasm-user  ALL=(ALL) NOPASSWD: ALL\" >> /etc/sudoers'"
+  }
+}
+
+
