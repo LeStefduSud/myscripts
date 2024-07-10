@@ -6,14 +6,14 @@
 
 
 # Launching the Ubuntu Deluxe container with rm option for testing only in front
-docker run --name=webtop \
-  --security-opt seccomp=unconfined --restart unless-stopped \
-  -e LC_ALL=fr_FR.UTF-8 \
-  -e TZ=Europe/Paris -e TITLE=Webtop -p 3000:3000 -p 3001:3001 \
+# https://hub.docker.com/r/kasmweb/desktop-deluxe
+docker run --name=webtop -d \
+  --restart unless-stopped --device /dev/dri:/dev/dri  --shm-size="1gb" \
   -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
-  --device /dev/dri:/dev/dri  --shm-size="1gb" \
-  --rm \
-  lscr.io/linuxserver/webtop:ubuntu-deluxe
+  -e LC_ALL=fr_FR.UTF-8 -e VNC_PW=password \
+  -e TZ=Europe/Paris -e TITLE=Webtop -p 6901:6901 \
+  kasmweb/desktop-deluxe:1.14.0-rolling
+
 
   
   
