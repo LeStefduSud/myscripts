@@ -11,9 +11,9 @@
 docker run --name=webtop -d \
   --restart unless-stopped --device /dev/dri:/dev/dri  --shm-size="1gb" \
   -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
-  -e LC_ALL=fr_FR.UTF-8 -e VNC_PW=password \
+  -e LC_ALL=fr_FR.UTF-8 -e VNC_PW=changeme \
   -e TZ=Europe/Paris -e TITLE=Webtop -p 6901:6901 \
-  kasmweb/desktop-deluxe:1.14.0-rolling
+  kasmweb/desktop-deluxe:1.15.0-rolling
 
 
   
