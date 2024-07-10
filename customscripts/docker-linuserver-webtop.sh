@@ -16,5 +16,10 @@ docker run --name=webtop -d \
   kasmweb/desktop-deluxe:1.15.0-rolling
 
 
+The container is now accessible via a browser : https://<IP>:6901
+
+User : kasm_user
+Password: password
+
   
   
