@@ -7,6 +7,7 @@
 
 # Launching the Ubuntu Deluxe container with rm option for testing only in front
 # https://hub.docker.com/r/kasmweb/desktop-deluxe
+# The Username to use is kasm_user and the password is the value set in the VNC_PW environment variable
 docker run --name=webtop -d \
   --restart unless-stopped --device /dev/dri:/dev/dri  --shm-size="1gb" \
   -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
