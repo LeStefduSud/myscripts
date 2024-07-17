@@ -1,6 +1,7 @@
-# This is my snippet to install OpnSense, an OpenSource firwall
-# See https://opnsense.org/ or https://opnsense.org/download/
-# See https://opnsense.org/users/get-started/ to get more information how to ins
+## This is my snippet to install OpnSense, an OpenSource firwall
+#### See https://opnsense.org/ or https://opnsense.org/download/
+#### See https://opnsense.org/users/get-started/ to get more information how to ins
+
 ---
 
 - Download the ISO or the VGA file
@@ -10,11 +11,11 @@
 - Default behaviour is to start the Live environment, to install log in with user installer and password opnsense
 
 
-# Depending on the target Hardware you should have UART error while booting
-# It is because bad mangement of UART devices on the FreeBSD distribution
-# You will have to disable them at installation following this step
+### Depending on the target Hardware you should have UART error while booting
+### It is because bad mangement of UART devices on the FreeBSD distribution
+### You will have to disable them at installation following this step
 
--To handle the UART error during the boot process of installing OPNsense on a Beelink, you can follow these steps:
+- To handle the UART error during the boot process of installing OPNsense on a Beelink, you can follow these steps:
 During the boot process, press the space bar to pause the boot menu.
 Press 3 to enter the loader.
 
@@ -23,7 +24,7 @@ set hint.uart.0.disabled="1"
 set hint.uart.1.disabled="1"
 boot
 		
-- After the installation is complete, edit the /boot/device.hints file and add the following lines:
+### After the installation is complete, edit the /boot/device.hints file and add the following lines:
 hint.uart.0.disabled="1"
 hint.uart.1.disabled="1"
 		
