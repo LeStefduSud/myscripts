@@ -13,6 +13,7 @@
 # Depending on the target Hardware you should have UART error while booting
 # It is because bad mangement of UART devices on the FreeBSD distribution
 # You will have to disable them at installation following this step
+# https://forums.freebsd.org/threads/boot-hangs-on-cherrytrail-uefi-system-installer-preinstalled-stick-no-dmesg-written.57321/
 
 -To handle the UART error during the boot process of installing OPNsense on a Beelink, you can follow these steps:
 During the boot process, press the space bar to pause the boot menu.
