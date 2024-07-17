@@ -1,6 +1,7 @@
 # This is my snippet to install OpnSense, an OpenSource firwall
 # See https://opnsense.org/ or https://opnsense.org/download/
 # See https://opnsense.org/users/get-started/ to get more information how to ins
+
 ---
 
 - Download the ISO or the VGA file
@@ -23,12 +24,18 @@ Override the UART settings by entering the following commands:
 set hint.uart.0.disabled="1"
 set hint.uart.1.disabled="1"
 boot
-		
+
+# on A beelink pro I confirm this issue solved also for a Beelink BT3 Pro 2 hardware..
+unset hint.uart.1.at
+boot
+
+
 - After the installation is complete, edit the /boot/device.hints file and add the following lines:
 hint.uart.0.disabled="1"
 hint.uart.1.disabled="1"
 		
 Alternatively, you can create a /boot/loader.conf.local file and add the same lines there.
 This is recommended for pfSense installations, as /boot/device.hints can be replaced during firmware updates.
+
 
 
