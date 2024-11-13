@@ -38,3 +38,9 @@ VERSION="1.23.3" && wget -q "https://golang.org/dl/go${VERSION}.linux-amd64.tar.
 #Installing some cool stuff to manage docker
 #https://github.com/jesseduffield/lazydocker
 go install github.com/jesseduffield/lazydocker@latest
+
+# Permanently boot to console mode:
+systemctl set-default multi-user.target
+# Permanently boot to graphical mode:
+systemctl set-default graphical.target
+
