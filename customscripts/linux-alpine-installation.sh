@@ -98,3 +98,6 @@ doas /etc/init.d/docker start
 docker run hello-world
 #If you get the simple message "Hello-World" in the console... everything is OK.
 
+#STEP 05 : installing DE XFCE ... or any supported DE (Mate,LxQt,XFCE....)
+# Following the standard wiki https://wiki.alpinelinux.org/wiki/Alpine_setup_scripts#setup-desktop
+setup-desktop
