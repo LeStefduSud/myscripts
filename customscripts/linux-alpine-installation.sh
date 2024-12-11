@@ -4,7 +4,7 @@
 #Download the version corresponding to your architecture from the official website https://www.alpinelinux.org/downloads/.
 # The standard version x86–64 should suit most of you. The Virtual/X86–64 version is optimized for installation on a VM.
 # Once the system has booted, we end up in the command line to start the installation, because everything is actually done on the command line (light command).
-#For installing on a VM Server I use https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-virt-3.20.1-x86_64.iso
+#For installing on a VM Server I use https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/x86_64/alpine-virt-3.21.0-x86_64.iso
 
 # STEP 01 : installing the BAS System
 # Simply login with default user (root or even enter)
