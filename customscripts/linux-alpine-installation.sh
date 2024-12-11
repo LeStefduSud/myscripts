@@ -69,7 +69,7 @@ PasswordAuthentication yes
 #Connected as root, add Doas (it might be necessary)
 apk add doas 
 echo 'permit: wheel'  /etc/doas.d/doas.conf 
-echo 'permit lestefdusud as root' >> /etc/doas.d/doas.conf 
+echo 'permit lestefsudsud as root' >> /etc/doas.d/doas.conf 
 
 
 #Adding the user to the wheel group
