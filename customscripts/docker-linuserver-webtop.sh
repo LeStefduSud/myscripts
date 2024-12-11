@@ -15,7 +15,6 @@ docker run --name=WebtopDeluxe -d \
   -e TZ=Europe/Paris -e TITLE=WebtopDeluxe -p 6901:6901 \
   kasmweb/desktop-deluxe:1.16.1-rolling-weekly
 
-
 # The container is now accessible via a browser : https://<IP>:6901
 User : kasm_user
 Password: changemeoninstall
