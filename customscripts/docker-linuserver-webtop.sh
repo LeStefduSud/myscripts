@@ -17,7 +17,6 @@ docker run --name=WebtopDeluxe -d \
 
 
 The container is now accessible via a browser : https://<IP>:6901
-
 User : kasm_user
 Password: changemeoninstall
 
