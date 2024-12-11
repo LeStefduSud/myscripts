@@ -73,7 +73,7 @@ echo 'permit lestefsudsud as root' >> /etc/doas.d/doas.conf
 
 
 #Adding the user to the wheel group
-Adding myuser -G wheel 
+adduser myuser -G wheel 
 #You need to logout my user and login again.
 #You can now access the root command without root.
 
