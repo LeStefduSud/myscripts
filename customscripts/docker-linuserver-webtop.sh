@@ -14,11 +14,11 @@ docker run --name=WebtopDeluxe -d \
   -e TZ=Europe/Paris -e TITLE=WebtopDeluxe -p 6901:6901 \
   kasmweb/desktop-deluxe:1.16.1-rolling-weekly
 
-docker run --name=WebtopDeluxe -d \
+docker run --name=WebtopDeluxe2 -d \
   --restart unless-stopped --shm-size="1gb" \
   -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
   -e LC_ALL=fr_FR.UTF-8 \
-  -e TZ=Europe/Paris -e TITLE=WebtopDeluxe -p 6901:6901 \
+  -e TZ=Europe/Paris -e TITLE=WebtopDeluxe2 -p 6901:6901 \
   kasmweb/desktop-deluxe:1.16.1-rolling-weekly
 
 # The container is now accessible via a browser : https://<IP>:6901
