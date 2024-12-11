@@ -11,7 +11,7 @@
 docker run --name=WebtopDeluxe -d \
   --restart unless-stopped --shm-size="1gb" \
   -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
-  -e LC_ALL=fr_FR.UTF-8 -e VNC_PW=31Maelle65!!!! \
+  -e LC_ALL=fr_FR.UTF-8 -e VNC_PW=changeme \
   -e TZ=Europe/Paris -e TITLE=WebtopDeluxe -p 6901:6901 \
   kasmweb/desktop-deluxe:1.16.1-rolling-weekly
 
