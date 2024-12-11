@@ -8,18 +8,18 @@
 # Launching the Ubuntu Deluxe container with rm option for testing only in front
 # https://hub.docker.com/r/kasmweb/desktop-deluxe
 # The Username to use is kasm_user and the password is the value set in the VNC_PW environment variable
-docker run --name=webtop -d \
-  --restart unless-stopped --device /dev/dri:/dev/dri  --shm-size="1gb" \
+docker run --name=WebtopDeluxe -d \
+  --restart unless-stopped --shm-size="1gb" \
   -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
-  -e LC_ALL=fr_FR.UTF-8 -e VNC_PW=changeme \
-  -e TZ=Europe/Paris -e TITLE=Webtop -p 6901:6901 \
-  kasmweb/desktop-deluxe:1.15.0-rolling
+  -e LC_ALL=fr_FR.UTF-8 -e VNC_PW=changemeoninstall \
+  -e TZ=Europe/Paris -e TITLE=WebtopDeluxe -p 6901:6901 \
+  kasmweb/desktop-deluxe:1.16.1-rolling-daily
 
 
 The container is now accessible via a browser : https://<IP>:6901
 
 User : kasm_user
-Password: password
+Password: changemeoninstall
 
   
   
