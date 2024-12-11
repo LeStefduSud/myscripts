@@ -33,7 +33,7 @@ sudo docker volume create portainer_data
 sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 
 #Installing the latest version of GO in one single line
-VERSION="1.23.3" && wget -q "https://golang.org/dl/go${VERSION}.linux-amd64.tar.gz" -O go.tar.gz && sudo tar -C /usr/local -xzf go.tar.gz && echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile && source ~/.profile && go version
+VERSION="1.23.4" && wget -q "https://golang.org/dl/go${VERSION}.linux-amd64.tar.gz" -O go.tar.gz && sudo tar -C /usr/local -xzf go.tar.gz && echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile && source ~/.profile && go version
 
 #Installing some cool stuff to manage docker
 #https://github.com/jesseduffield/lazydocker
