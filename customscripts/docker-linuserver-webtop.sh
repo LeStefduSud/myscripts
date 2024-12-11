@@ -4,7 +4,6 @@
 # More information on my post My Personal https://medium.com/@lestefdusud/my-personal-free-webtop-in-5-minutes-383040f12666
 # Or on official doc https://medium.com/@lestefdusud/my-personal-free-webtop-in-5-minutes-383040f12666
 
-
 # Launching the Ubuntu Deluxe container with rm option for testing only in front
 # https://hub.docker.com/r/kasmweb/desktop-deluxe
 # The Username to use is kasm_user and the password is the value set in the VNC_PW environment variable
