@@ -13,7 +13,7 @@ docker run --name=WebtopDeluxe -d \
   -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
   -e LC_ALL=fr_FR.UTF-8 -e VNC_PW=changemeoninstall \
   -e TZ=Europe/Paris -e TITLE=WebtopDeluxe -p 6901:6901 \
-  kasmweb/desktop-deluxe:1.16.1-rolling-daily
+  kasmweb/desktop-deluxe:1.16.1-rolling-weekly
 
 
 The container is now accessible via a browser : https://<IP>:6901
