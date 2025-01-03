@@ -28,7 +28,7 @@ sudo docker run --name=WebTopUbuntu -d \
   -e LC_ALL=fr_FR.UTF-8 \
   -e TZ=Europe/Paris -e TITLE=WebtopUbuntu -p 6901:6901 \
   -e VNC_PW=changemeoninstall \
-  kasmweb/ubuntu-bionic-desktop
+  kasmweb/ubuntu-jammy-desktop:aarch64-1.16.1
 
 # The container is now accessible via a browser : https://<IP>:6901
 User : kasm_user
