@@ -22,7 +22,7 @@ docker run --name=WebtopDeluxe2 -d \
   kasmweb/desktop-deluxe:1.16.1-rolling-weekly
 
 # Basic ubuntu desktop
-docker run --name=WebtopUbuntu -d \
+sudo docker run --name=WebTopUbuntu -d \
   --restart unless-stopped --shm-size="1gb" \
   -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
   -e LC_ALL=fr_FR.UTF-8 \
