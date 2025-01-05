@@ -1,0 +1,22 @@
+services:
+  webtopubuntu:
+    image: kasmweb/ubuntu-jammy-desktop:aarch64-1.16.1
+    container_name: WebTopUbuntu
+    restart: unless-stopped
+    shm_size: 1gb
+    volumes:
+      - webtop_home:/home
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - LC_ALL=fr_FR.UTF-8
+      - TZ=Europe/Paris
+      - TITLE=WebtopUbuntu
+      - VNC_PW=CHANGEMEONINSTALL
+    ports:
+      - "6901:6901"
+    network_mode: "host"
+volumes:
+  webtop_home:
+  networks:
+host:
+    external: true
