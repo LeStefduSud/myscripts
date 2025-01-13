@@ -24,7 +24,34 @@ If you haven't installed CentOS yet, follow these steps to install it from an IS
     After installing CentOS, you need to install a graphical desktop environment. You can install GNOME, KDE, or any other preferred desktop environment. For example, to install GNOME, use the following command:
 
     ```bash
-    sudo yum groupinstall "GNOME Desktop" -y
+    You can install different desktop environments (DE) on CentOS. Here are some options:
+
+    - **GNOME Desktop:**
+        ```bash
+        sudo yum groupinstall "GNOME Desktop" -y
+        ```
+
+    - **KDE Plasma Workspaces:**
+        ```bash
+        sudo yum groupinstall "KDE Plasma Workspaces" -y
+        ```
+
+    - **Xfce:**
+        ```bash
+        sudo yum groupinstall "Xfce" -y
+        ```
+
+    - **MATE Desktop:**
+        ```bash
+        sudo yum groupinstall "MATE Desktop" -y
+        ```
+
+    - **Cinnamon Desktop:**
+        ```bash
+        sudo yum groupinstall "Cinnamon" -y
+        ```
+
+    Choose the desktop environment you prefer and install it using the corresponding command.
     ```
 
 5. **Set Graphical Target:**
