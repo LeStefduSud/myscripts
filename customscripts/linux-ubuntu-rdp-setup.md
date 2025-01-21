@@ -27,3 +27,27 @@ sudo usermod -G xrdp MYUSER
 
 # reboot server
 sudo reboot
+
+# Fix the RDP color issue
+1) Create a config file:
+
+sudo nano /etc/polkit-1/localauthority.conf.d/02-allow-colord.conf
+
+2) Paste in the following:
+
+/etc/polkit-1/localauthority.conf.d/02-allow-colord.conf
+polkit.addRule(function(action, subject) {
+ if ((action.id == "org.freedesktop.color-manager.create-device" ||
+ action.id == "org.freedesktop.color-manager.create-profile" ||
+ action.id == "org.freedesktop.color-manager.delete-device" ||
+ action.id == "org.freedesktop.color-manager.delete-profile" ||
+ action.id == "org.freedesktop.color-manager.modify-device" ||
+ action.id == "org.freedesktop.color-manager.modify-profile") &&
+ subject.isInGroup("{users}")) {
+ return polkit.Result.YES;
+ }
+});
+
+3) After saving the file, reboot the server:
+
+sudo reboot
