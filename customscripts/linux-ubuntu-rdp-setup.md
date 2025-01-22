@@ -7,7 +7,7 @@
 # Authorize port 3389 on the OCI
 # Update the server, install taskel then install ubuntu desktop:
 sudo apt-get update && sudo apt-get upgrade -y
-sudo apt install tasksel
+sudo apt install tmux tasksel htop dialog libterm-readline-perl-perl 
 sudo tasksel install ubuntu-desktop
 
 # Installing XRDP and enabling it
@@ -33,6 +33,10 @@ sudo openssl req -x509 -newkey rsa:2048 -nodes -keyout /etc/xrdp/key.pem -out /e
 certificate=/etc/xrdp/cert.pem
 key_file=/etc/xrdp/key.pem
 sudo systemctl restart xrdp
+
+# Defining the Xsession to start
+echo xfce4-session > ~/.xsession
+
 
 
 # reboot server
