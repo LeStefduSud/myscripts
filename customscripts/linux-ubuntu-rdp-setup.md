@@ -6,7 +6,6 @@
 # Setup the ubuntu VM 
 # Authorize port 3389 on the OCI
 # Update the server, install taskel then install ubuntu desktop:
-
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt install tasksel
 sudo tasksel install ubuntu-desktop
@@ -27,6 +26,10 @@ sudo usermod -G xrdp MYUSER
 
 # reboot server
 sudo reboot
+
+
+
+
 
 # Fix the RDP color issue
 1) Create a config file:
