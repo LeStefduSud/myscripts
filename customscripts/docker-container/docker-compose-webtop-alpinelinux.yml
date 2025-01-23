@@ -1,6 +1,7 @@
 services:
   webtopubuntu:
-    image: kasmweb/alpine-320-desktop
+    image: kasmweb/alpine-320-desktop:1.16.1-rolling-daily
+  
     container_name: WebTopUbuntu
     restart: unless-stopped
     shm_size: 1gb
