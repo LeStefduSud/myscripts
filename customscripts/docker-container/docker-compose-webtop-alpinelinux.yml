@@ -1,6 +1,6 @@
 services:
   webtopubuntu:
-    image: kasmweb/ubuntu-jammy-desktop:aarch64-1.16.1
+    image: kasmweb/alpine-320-desktop
     container_name: WebTopUbuntu
     restart: unless-stopped
     shm_size: 1gb
@@ -17,6 +17,5 @@ services:
     network_mode: "host"
 volumes:
   webtop_home:
-  networks:
-host:
-    external: true
+
+
