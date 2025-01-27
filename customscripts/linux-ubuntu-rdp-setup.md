@@ -35,7 +35,7 @@ key_file=/etc/xrdp/key.pem
 sudo systemctl restart xrdp
 
 # Defining the Xsession to start
-echo xfce4-session > ~/.xsession
+echo startxfce4 > ~/.xsession
 
 
 
