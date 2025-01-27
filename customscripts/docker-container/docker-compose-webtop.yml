@@ -1,7 +1,7 @@
 services:
   webtopubuntu:
-    image: kasmweb/ubuntu-jammy-desktop:aarch64-1.16.1-rolling-weekly
-    container_name: WebTopUbuntu
+    image: kasmweb/remmina:aarch64-1.16.1-rolling-weekly
+    container_name: WebTopRemmina
     restart: unless-stopped
     shm_size: 1gb
     volumes:
