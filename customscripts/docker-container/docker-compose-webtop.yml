@@ -17,6 +17,3 @@ services:
     network_mode: "host"
 volumes:
   webtop_home:
-  networks:
-host:
-    external: true
