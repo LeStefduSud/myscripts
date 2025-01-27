@@ -1,6 +1,6 @@
 services:
   webtopubuntu:
-    image: kasmweb/ubuntu-jammy-desktop:aarch64-1.16.1
+    image: kasmweb/ubuntu-jammy-desktop:1.16.1-rolling-weekly
     container_name: WebTopUbuntu
     restart: unless-stopped
     shm_size: 1gb
@@ -14,6 +14,5 @@ services:
       - VNC_PW=CHANGEMEONINSTALL
     ports:
       - "6901:6901"
-    network_mode: "host"
 volumes:
   webtop_home:
