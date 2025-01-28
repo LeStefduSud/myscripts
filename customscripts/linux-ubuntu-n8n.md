@@ -26,7 +26,6 @@ docker run -d \
 -p 5432:5432 \
 -v pgdata:/var/lib/postgresql/data \
 postgres:latest
-
 ## Using Docker Compose
 version: '3.8'
 services:
