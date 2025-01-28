@@ -10,13 +10,17 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
 nvm --version
 
-## Installling node, n8n and pm2 (for restarting)
+## Installling node, n8n and pm2 (for startup/restarting management)
 nvm install 22.13.1
 nvm use 22.13.1
 npm install -g n8n@latest
 npm install -g pm2@latest
 
 # Installing postgres in a container to facailiate deployement
+# Using command line
+
+
+
 
 
 
