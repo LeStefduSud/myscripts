@@ -1,17 +1,14 @@
-# ALl stuff for installing a Ubuntu system
-[Perplexity.ai](https://www.perplexity.ai/search/can-u-give-a-a-tutorial-to-run-UgR4tk_6QaewXjE11metpA)
+# ALl stuff for installing n8n a Ubuntu system using npm to run it localy
+[https://blog.horizon.dev/how-to-deploy-n8n/](https://blog.horizon.dev/how-to-deploy-n8n/)
 
 # Updating, installing stuff
-sudo apt update
-sudo apt dist-upgrade
-sudo apt install tmux htop btop
+sudo apt update -y && sudo apt upgrade -y
+sudo apt install curl -y
 
-# Installing OpenSSH Server
-To install the OpenSSH server, run the following command:
-sudo apt install openssh-server
-sudo systemctl enable ssh
-sudo systemctl start ssh
-sudo systemctl status ssh
+# Node Virtual Machine
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc
+nvm --version
 
 # Activating XRDP and configuring Desktop Session to launch
 sudo apt install xrdp
