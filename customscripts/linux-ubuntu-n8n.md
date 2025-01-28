@@ -10,17 +10,39 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
 nvm --version
 
-## Installling node, n8n and pm2 (for startup/restarting management)
+# Installling node, n8n and pm2 (for startup/restarting management)
 nvm install 22.13.1
 nvm use 22.13.1
 npm install -g n8n@latest
 npm install -g pm2@latest
 
 # Installing postgres in a container to facailiate deployement
-# Using command line
+## Using command line
+docker run -d \
+--name postgres-container \
+-e POSTGRES_USER=myuser \
+-e POSTGRES_PASSWORD=mypassword \
+-e POSTGRES_DB=mydatabase \
+-p 5432:5432 \
+-v pgdata:/var/lib/postgresql/data \
+postgres:latest
 
-
-
+## Using Docker Compose
+version: '3.8'
+services:
+  postgres:
+    container_name: postgres-container
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=mydatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
 
 
 
