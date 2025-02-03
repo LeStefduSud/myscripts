@@ -7,3 +7,11 @@ sudo apt install tightvncserver -y
 
 # Launch vnc server as session user to configue it
 vncserver
+sudo apt install xfce4 xfce4-goodies -y
+
+# Setting the X Startup
+nano ~/.vnc/xstartup
+#!/bin/bash
+xrdb $HOME/.Xresources
+startxfce4 &
+
