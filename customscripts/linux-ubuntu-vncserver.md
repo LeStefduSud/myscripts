@@ -4,3 +4,6 @@
 # Install VNC server / configur it and defining a DE
 sudo apt update && sudo apt upgrade -y
 sudo apt install tightvncserver -y
+
+# Launch vnc server as session user to configue it
+vncserver
