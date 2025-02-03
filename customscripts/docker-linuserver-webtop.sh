@@ -34,4 +34,9 @@ sudo docker run --name=WebTopUbuntu -d \
 User : kasm_user
 Password: changemeoninstall
 
+# For adding communciation with the host
+extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+
   
