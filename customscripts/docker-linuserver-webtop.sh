@@ -12,6 +12,7 @@ docker run --name=WebtopDeluxe -d \
   -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
   -e LC_ALL=fr_FR.UTF-8 -e VNC_PW=changemeoninstall \
   -e TZ=Europe/Paris -e TITLE=WebtopDeluxe -p 6901:6901 \
+  --add-host=host.docker.internal:host-gateway \
   kasmweb/desktop-deluxe:1.16.1-rolling-weekly
 
 docker run --name=WebtopDeluxe2 -d \
@@ -19,6 +20,7 @@ docker run --name=WebtopDeluxe2 -d \
   -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
   -e LC_ALL=fr_FR.UTF-8 \
   -e TZ=Europe/Paris -e TITLE=WebtopDeluxe2 -p 6901:6901 \
+  --add-host=host.docker.internal:host-gateway \
   kasmweb/desktop-deluxe:1.16.1-rolling-weekly
 
 # Basic ubuntu desktop
@@ -27,6 +29,7 @@ sudo docker run --name=WebTopUbuntu -d \
   -v /path/to/data:/config -v /var/run/docker.sock:/var/run/docker.sock \
   -e LC_ALL=fr_FR.UTF-8 \
   -e TZ=Europe/Paris -e TITLE=WebtopUbuntu -p 6901:6901 \
+  --add-host=host.docker.internal:host-gateway \
   -e VNC_PW=changemeoninstall \
   kasmweb/ubuntu-jammy-desktop:aarch64-1.16.1
 
@@ -34,9 +37,14 @@ sudo docker run --name=WebTopUbuntu -d \
 User : kasm_user
 Password: changemeoninstall
 
-# For adding communciation with the host
+# For adding communciation with the host 
+## in a compose file
 extra_hosts:
       - "host.docker.internal:host-gateway"
+## on a run command
+--add-host=host.docker.internal:host-gateway <image>
+      
+      
 
 
   
