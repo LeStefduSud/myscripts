@@ -19,3 +19,8 @@ chmod +x ~/.vnc/xstartup
 
 
 
+# Option 2 : configure it using KasmVNC help
+# [KasmVnc DOc](https://www.kasmweb.com/kasmvnc/docs/1.0.0/index.html)
+
+
+
