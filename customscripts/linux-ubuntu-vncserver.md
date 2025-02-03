@@ -15,3 +15,7 @@ nano ~/.vnc/xstartup
 xrdb $HOME/.Xresources
 startxfce4 &
 
+chmod +x ~/.vnc/xstartup
+
+
+
