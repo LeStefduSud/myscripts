@@ -3,8 +3,6 @@
 
 
 # Creating a docker compose file
-version: '3'
-
 services:
   guacamole:
     image: oznu/guacamole:armhf
