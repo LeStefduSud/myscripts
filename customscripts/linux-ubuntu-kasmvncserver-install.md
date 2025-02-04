@@ -4,11 +4,12 @@
 # Please choose the package for your distro here (under Assets):
 # Get the latest Release on https://github.com/kasmtech/KasmVNC/releases
 wget https://github.com/kasmtech/KasmVNC/releases/download/v1.3.3/kasmvncserver_noble_1.3.3_arm64.deb
-
 sudo apt-get install ./kasmvncserver_*.deb
 
 # Add your user to the ssl-cert group
-sudo addgroup $USER ssl-cert
+sudo usermod -a -G ssl-cert ubuntu
+
+
 
 # YOU MUST DISCONNECT AND RECONNECT FOR GROUP MEMBERSHIP CHANGE TO APPLY
 
