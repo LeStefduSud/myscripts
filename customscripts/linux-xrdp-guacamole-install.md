@@ -1,4 +1,16 @@
-# Installation of Xrdp an Guacamole on a Ubuntu server
+# Installation of XRDP an Guacamole on a Ubuntu server
+# Base on the video tutorial [Videos on Youtube](https://www.youtube.com/watch?v=gsvS2M5knOw)
+
+
+
+
+
+
+
+
+
+
+
 # To Have a fully RDP Remote desktop accessible over Https
 # Perplexicty Tread : https://www.perplexity.ai/search/can-u-give-a-a-tutorial-to-run-XN4bMAauTfSgi7ErkoSFZw
 
