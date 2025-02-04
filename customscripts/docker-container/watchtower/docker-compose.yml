@@ -1,6 +1,9 @@
 services:
   watchtower:
     image: containrrr/watchtower
+    env:
+      WATCHTOWER_NOTIFICATION_REPORT: "true"
+      --WATCHTOWER_NOTIFICATION_URL: "slack://watchtower@token-a/token-b/token-c"
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
