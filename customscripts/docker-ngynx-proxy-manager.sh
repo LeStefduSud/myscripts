@@ -26,5 +26,5 @@ docker compose up -d
 docker compose logs
 
 #Default user//password of the NPM Admin interface TO BE CHANGED
-admin /// changeme
+admin@example.com /// changeme
 
