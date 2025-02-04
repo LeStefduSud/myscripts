@@ -14,7 +14,8 @@ services:
       - VNC_PW=CHANGEMEONINSTALL
     ports:
       - "6901:6901"
-    network_mode: "host"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 volumes:
   webtop_home:
 
