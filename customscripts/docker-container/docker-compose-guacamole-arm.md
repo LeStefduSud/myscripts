@@ -1,6 +1,8 @@
 # Docker Compose File for starting a Guacamole Container on a ARM host
 # Allowing to connect to the host using host.docker.internam
 
+
+# Creating a docker compose file
 version: '3'
 
 services:
