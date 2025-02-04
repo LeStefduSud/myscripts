@@ -15,11 +15,16 @@ services:
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
 #Save the file
+
 #Starting the composed stack in background
 docker-compose up -d
 docker compose up -d
-
 docker compose logs
+
+#Default user//password of the NPM Admin interface TO BE CHANGED
+admin /// changeme
 
