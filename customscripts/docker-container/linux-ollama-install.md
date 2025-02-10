@@ -21,11 +21,13 @@ services:
     image: ghcr.io/open-webui/open-webui:main
     container_name: openwebui
     ports:
-      - 3000:8080
+      - "3000:8080"
     volumes:
       - openwebui_storage:/app/backend/data
     extra_hosts:
-      - host.docker.internal:host-gateway
+      - "host.docker.internal:host-gateway"
     restart: unless-stopped
- volumes:
-   openwebui_storage:
+volumes:
+  openwebui_storage: {}
+
+   
