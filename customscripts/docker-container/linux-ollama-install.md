@@ -14,3 +14,18 @@ ollama run llama3.2
 ollama run mistral
 
 # Installing OpenWebUI to discuss with ollama like chatGPT
+docker compose up -d
+# docker-compose.yaml content:
+services:
+  openwebui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: openwebui
+    ports:
+      - 3000:8080
+    volumes:
+      - openwebui_storage:/app/backend/data
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    restart: unless-stopped
+ volumes:
+   openwebui_storage:
