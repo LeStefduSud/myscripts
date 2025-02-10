@@ -7,7 +7,7 @@ services:
     volumes:
     - ollama_storage:/root/.ollama
     extra_hosts:
-      - "host.docker.internal:host-gateway"
+      - host.docker.internal:host-gateway
     restart: unless-stopped
 
 volumes:
