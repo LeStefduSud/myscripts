@@ -32,8 +32,11 @@ volumes:
 
 # Installing WebUI using native installation with python and uv
 # https://docs.openwebui.com/getting-started/quick-start/
+# NOTE : be sure to be on the user that will launch the systemD unit (ubuntu here)
 sudo curl -LsSf https://astral.sh/uv/install.sh | sh
+
 ## Installing OpenWeb UI using UV
+DATA_DIR=~/.open-webui uvx --python 3 open-webui@latest serve
 
 
 # Create systemd service file
@@ -49,7 +52,7 @@ Environment="DATA_DIR=/home/ubuntu/.open-webui"
 Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/ubuntu/.local/bin"
 Environment="PYTHONPATH=/usr/bin/python3"
 WorkingDirectory=/home/ubuntu/.open-webui
-ExecStart=/home/ubuntu/.local/bin/uvx --python /usr/bin/python3 open-webui@latest serve
+ExecStart=/home/ubuntu/.local/bin/uvx --python 3 open-webui@latest serve
 Restart=always
 RestartSec=3
 
