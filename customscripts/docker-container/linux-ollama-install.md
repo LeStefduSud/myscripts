@@ -42,12 +42,12 @@ After=network.target
 
 [Service]
 Type=simple
-User=sstassin
-Environment="DATA_DIR=/home/sstassin/.open-webui"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/sstassin/.local/bin"
+User=ubuntu
+Environment="DATA_DIR=/home/ubuntu/.open-webui"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/ubuntu/.local/bin"
 Environment="PYTHONPATH=/usr/bin/python3"
-WorkingDirectory=/home/sstassin/.open-webui
-ExecStart=/home/sstassin/.local/bin/uvx --python /usr/bin/python3 open-webui@latest serve
+WorkingDirectory=/home/ubuntu/.open-webui
+ExecStart=/home/ubuntu/.local/bin/uvx --python /usr/bin/python3 open-webui@latest serve
 Restart=always
 RestartSec=3
 
