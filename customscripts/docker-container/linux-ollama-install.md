@@ -37,13 +37,15 @@ sudo curl -LsSf https://astral.sh/uv/install.sh | sh
 # Create systemd service file
 sudo tee /etc/systemd/system/openwebui.service << 'EOF'
 [Unit]
-Description=Open WebUI Server
+Description=Open WebUI Service
 After=network.target
 
 [Service]
 Type=simple
 User=sstassin
 Environment="DATA_DIR=/home/sstassin/.open-webui"
+Environment="PATH=/home/sstassin/.local/bin:$PATH"
+WorkingDirectory=/home/sstassin/.open-webui
 ExecStart=/home/sstassin/.local/bin/uvx --python 3.11 open-webui@latest serve
 Restart=always
 RestartSec=3
