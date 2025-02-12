@@ -13,7 +13,7 @@ ollama run deepseek-r1
 ollama run llama3.2
 ollama run mistral
 
-# Installing OpenWebUI to discuss with ollama like chatGPT
+# Installing OpenWebUI to discuss with ollama like chatGPT using docker
 docker compose up -d
 # docker-compose.yaml content:
 services:
@@ -30,4 +30,14 @@ services:
 volumes:
   openwebui_storage: {}
 
-   
+# Installing WebUI using native installation with python and uv
+# https://docs.openwebui.com/getting-started/quick-start/
+sudo curl -LsSf https://astral.sh/uv/install.sh | sh
+## Installing OpenWeb UI using UV
+DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve
+
+# Accesing using default Python port
+http://localhost:8080/ 
+
+## Updating with Pip
+pip install -U open-webui
