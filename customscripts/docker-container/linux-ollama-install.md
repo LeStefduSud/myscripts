@@ -34,6 +34,8 @@ volumes:
 # https://docs.openwebui.com/getting-started/quick-start/
 sudo curl -LsSf https://astral.sh/uv/install.sh | sh
 ## Installing OpenWeb UI using UV
+
+
 # Create systemd service file
 sudo tee /etc/systemd/system/openwebui.service << 'EOF'
 [Unit]
