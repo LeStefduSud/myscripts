@@ -61,6 +61,7 @@ sudo systemctl start openwebui
 
 # Check status (optional)
 sudo systemctl status openwebui
+sudo journalctl -f -u openwebui.service -n 50 --no-pager
 
 # Accesing using default Python port
 http://localhost:8080/ 
