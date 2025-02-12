@@ -44,9 +44,10 @@ After=network.target
 Type=simple
 User=sstassin
 Environment="DATA_DIR=/home/sstassin/.open-webui"
-Environment="PATH=/home/sstassin/.local/bin:$PATH"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/sstassin/.local/bin"
+Environment="PYTHONPATH=/usr/bin/python3"
 WorkingDirectory=/home/sstassin/.open-webui
-ExecStart=/home/sstassin/.local/bin/uvx --python 3.11 open-webui@latest serve
+ExecStart=/home/sstassin/.local/bin/uvx --python /usr/bin/python3 open-webui@latest serve
 Restart=always
 RestartSec=3
 
