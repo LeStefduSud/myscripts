@@ -34,7 +34,30 @@ volumes:
 # https://docs.openwebui.com/getting-started/quick-start/
 sudo curl -LsSf https://astral.sh/uv/install.sh | sh
 ## Installing OpenWeb UI using UV
-DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve
+# Create systemd service file
+sudo tee /etc/systemd/system/openwebui.service << 'EOF'
+[Unit]
+Description=Open WebUI Server
+After=network.target
+
+[Service]
+Type=simple
+User=sstassin
+Environment="DATA_DIR=/home/sstassin/.open-webui"
+ExecStart=/home/sstassin/.local/bin/uvx --python 3.11 open-webui@latest serve
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Enable and start the service
+sudo systemctl enable openwebui
+sudo systemctl start openwebui
+
+# Check status (optional)
+sudo systemctl status openwebui
 
 # Accesing using default Python port
 http://localhost:8080/ 
