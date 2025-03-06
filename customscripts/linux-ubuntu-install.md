@@ -23,7 +23,6 @@ sudo apt install xrdp
 sudo nano /etc/xrdp/xrdp.ini
 port=3389
 
-
 sudo systemctl enable xrdp
 sudo systemctl start xrdp
 # Defining an setting ssl key
@@ -50,3 +49,7 @@ For XRDP:
     .
 
 # Installing an configuring VNCServer to start Lxde
+
+# Installing X11 Forwarding
+[LInk](https://itekblog.com/ssh-x11-forwarding-display-using-mobaxterm/)
+sudo apt-get install xauth xfonts-base
