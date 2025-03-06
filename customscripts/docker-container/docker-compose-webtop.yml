@@ -13,8 +13,6 @@ services:
       - TITLE=WebtopUbuntu
       - VNC_PW=CHANGEMEONINSTALL
     ports:
-      - "6901:6901"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+      - "6902:6901"
 volumes:
   webtop_home:
