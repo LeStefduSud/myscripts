@@ -5,7 +5,7 @@
 sudo apt update
 sudo apt dist-upgrade
 sudo apt install tmux htop btop nano tasksel dialog
-sudo
+sudo tasksel
 
 # Installing OpenSSH Server
 To install the OpenSSH server, run the following command:
