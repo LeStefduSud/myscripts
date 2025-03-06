@@ -53,3 +53,5 @@ For XRDP:
 # Installing X11 Forwarding
 [LInk](https://itekblog.com/ssh-x11-forwarding-display-using-mobaxterm/)
 sudo apt-get install xauth xfonts-base
+sudo /etc/ssh/sshd_config
+set X11Forwarding yes
