@@ -1,16 +1,4 @@
-# Installation of XRDP an Guacamole on a Ubuntu server
-# Base on the video tutorial [Videos on Youtube](https://www.youtube.com/watch?v=gsvS2M5knOw)
-
-
-
-
-
-
-
-
-
-
-
+# Installation of Xrdp an Guacamole on a Ubuntu server
 # To Have a fully RDP Remote desktop accessible over Https
 # Perplexicty Tread : https://www.perplexity.ai/search/can-u-give-a-a-tutorial-to-run-XN4bMAauTfSgi7ErkoSFZw
 
@@ -21,7 +9,7 @@ sudo systemctl restart xrdp
 
 # Generating SSL and adding the user to ssl-cert to allow ssl connecion
 sudo adduser your_username ssl-cert  
-sudo openssl req -x509 -newkey rsa:2048 -nodes -keyout /etc/xrdp/key.pem -out /etc/xrdp/cert.pem -days 365
+sudo openssl req -x509 -newkey rsa:2048 -nodes -keyout /etc/xrdp/key.pem -out /etc/xrdp/cert.pem -days 3365
 
 # Define the ssl file to use and define section below
 # sudo nano /etc/xrdp/xrdp.ini
