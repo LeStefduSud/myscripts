@@ -13,6 +13,10 @@ sudo systemctl enable ssh
 sudo systemctl start ssh
 sudo systemctl status ssh
 
+## Installing Webmin
+curl -o webmin-setup-repo.sh https://raw.githubusercontent.com/webmin/webmin/master/webmin-setup-repo.sh
+sh webmin-setup-repo.sh
+
 # Activating XRDP and configuring Desktop Session to launch
 sudo apt install xrdp
 sudo systemctl enable xrdp
