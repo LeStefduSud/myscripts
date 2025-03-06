@@ -19,6 +19,9 @@ sh webmin-setup-repo.sh
 
 # Activating XRDP and configuring Desktop Session to launch
 sudo apt install xrdp
+## Changing the default port if needed
+sudo nano /etc/xrdp/xrdp.ini
+
 sudo systemctl enable xrdp
 sudo systemctl start xrdp
 # Defining an setting ssl key
