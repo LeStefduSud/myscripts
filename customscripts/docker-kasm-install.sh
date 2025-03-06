@@ -17,6 +17,9 @@ curl -O https://kasm-static-content.s3.amazonaws.com/kasm_release_1.16.0.a1d5b7.
 tar -xf kasm_release_1.16.0.a1d5b7.tar.gz
 sudo bash kasm_release/upgrade.sh --proxy-port 9443
 
+# Installing on a Ubuntu ARM64
+# https://www.kasmweb.com/docs/latest/install/single_server_install.html#installing-on-a-ubuntu-arm64
+
 # Using Proot-apps to install without privilege and persistance application
 proot-apps install gui
 
