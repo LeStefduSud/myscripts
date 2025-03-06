@@ -21,6 +21,8 @@ sh webmin-setup-repo.sh
 sudo apt install xrdp
 ## Changing the default port if needed
 sudo nano /etc/xrdp/xrdp.ini
+port=3389
+
 
 sudo systemctl enable xrdp
 sudo systemctl start xrdp
