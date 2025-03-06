@@ -25,7 +25,7 @@ certificate=/etc/xrdp/cert.pem
 key_file=/etc/xrdp/key.pem
 sudo adduser xrdp ssl-cert
 sudo chown root:root /etc/xrdp/cert.pem /etc/xrdp/key.pem
-sudo chmod 600 /etc/xrdp/cert.pem /etc/xrdp/key.pem
+n
 sudo systemctl restart xrdp
 
 
@@ -39,3 +39,5 @@ For XRDP:
     .
     Add echo "allowed_users = anybody" >> /etc/X11/Xwrapper.config to allow access for all users6
     .
+
+# Installing an configuring VNCServer to start Lxde
