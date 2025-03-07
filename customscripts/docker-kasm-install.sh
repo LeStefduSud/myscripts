@@ -24,12 +24,13 @@ sudo bash kasm_release/upgrade.sh --proxy-port 9443
 proot-apps install gui
 
 # Defining sudo on a Ubuntu container
-Modify the Docker Exec Config field to include the following example of installing sudo and configuring sudo to not require a password.
+# Modify the Docker Exec Config field to include the following example of installing sudo and configuring sudo to not require a password.
 {
  "first_launch":{
       "user":"root",
       "cmd":"bash -c 'apt-get update && apt-get install -y sudo && echo \"kasm-user  ALL=(ALL) NOPASSWD: ALL\" >> /etc/sudoers'"
   }
 }
+
 
 
