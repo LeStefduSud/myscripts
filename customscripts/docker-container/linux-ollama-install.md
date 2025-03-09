@@ -20,6 +20,7 @@ ollama run mistral
 docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
 # Using a compose file [Link](https://hub.docker.com/r/ollama/ollama)
 
+# Docker Compose file to use all the service
 services:
   ollama:
     image: ollama/ollama:latest
@@ -33,22 +34,7 @@ services:
     networks:
       - ollama_network
     restart: unless-stopped
-volumes:
-  ollama_storage: {}
-networks:
-  ollama_network:
-    driver: bridge
 
-
-# Installing Perplexica.ia using docker
-[Link](https://github.com/ItzCrazyKns/Perplexica?tab=readme-ov-file#getting-started-with-docker-recommended)
-git clone https://github.com/ItzCrazyKns/Perplexica.git
-
-
-# Installing OpenWebUI to discuss with ollama like chatGPT using docker
-docker compose up -d
-# docker-compose.yaml content:
-services:
   openwebui:
     image: ghcr.io/open-webui/open-webui:main
     container_name: openwebui
@@ -57,15 +43,23 @@ services:
     volumes:
       - openwebui_storage:/app/backend/data
     extra_hosts:
-      - "host.docker.internal:host-gateway"
+      - host.docker.internal:host-gateway
     networks:
       - ollama_network
     restart: unless-stopped
+
 volumes:
+  ollama_storage: {}
   openwebui_storage: {}
+
 networks:
   ollama_network:
     driver: bridge
+
+
+# Installing Perplexica.ia using docker
+[Link](https://github.com/ItzCrazyKns/Perplexica?tab=readme-ov-file#getting-started-with-docker-recommended)
+git clone https://github.com/ItzCrazyKns/Perplexica.git
 
 # Installing WebUI using native installation with python and uv
 # https://docs.openwebui.com/getting-started/quick-start/
