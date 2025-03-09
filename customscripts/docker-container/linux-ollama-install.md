@@ -13,6 +13,29 @@ ollama run deepseek-r1
 ollama run llama3.2
 ollama run mistral
 
+# Installaing ollama using docker
+[Official Docker Docker](https://github.com/ollama/ollama/blob/main/docs/docker.md)
+
+# Docker Compose File
+docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+# Using a compose file [Link](https://hub.docker.com/r/ollama/ollama)
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_storage:/root/.ollama
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+volumes:
+  ollama_storage: {}
+
+
+
 # Installing OpenWebUI to discuss with ollama like chatGPT using docker
 docker compose up -d
 # docker-compose.yaml content:
