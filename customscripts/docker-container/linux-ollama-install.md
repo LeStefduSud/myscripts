@@ -58,9 +58,14 @@ services:
       - openwebui_storage:/app/backend/data
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    networks:
+      - ollama_network
     restart: unless-stopped
 volumes:
   openwebui_storage: {}
+networks:
+  ollama_network:
+    driver: bridge
 
 # Installing WebUI using native installation with python and uv
 # https://docs.openwebui.com/getting-started/quick-start/
