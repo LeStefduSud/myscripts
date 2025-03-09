@@ -30,10 +30,19 @@ services:
       - ollama_storage:/root/.ollama
     extra_hosts:
       - host.docker.internal:host-gateway
+    networks:
+      - ollama
     restart: unless-stopped
 volumes:
   ollama_storage: {}
+networks:
+  ollama:
+    driver: bridge
 
+
+# Installing Perplexica.ia using docker
+[Link](https://github.com/ItzCrazyKns/Perplexica?tab=readme-ov-file#getting-started-with-docker-recommended)
+git clone https://github.com/ItzCrazyKns/Perplexica.git
 
 
 # Installing OpenWebUI to discuss with ollama like chatGPT using docker
