@@ -31,12 +31,12 @@ services:
     extra_hosts:
       - host.docker.internal:host-gateway
     networks:
-      - ollama
+      - ollama_network
     restart: unless-stopped
 volumes:
   ollama_storage: {}
 networks:
-  ollama:
+  ollama_network:
     driver: bridge
 
 
