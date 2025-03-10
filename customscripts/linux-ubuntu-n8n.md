@@ -16,6 +16,29 @@ nvm use 22.13.1
 npm install -g n8n@latest
 npm install -g pm2@latest
 
+# Installing using docker
+```yaml
+version: '3.8'
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    container_name: n8n
+    ports:
+      - "5678:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+    networks:
+      - ollama_network
+volumes:
+  n8n_data:
+networks:
+  ollama_network:
+    external: true
+```
+
+
+
+
 # Installing postgres in a container to facailiate deployement
 ## Using command line
 docker run -d \
