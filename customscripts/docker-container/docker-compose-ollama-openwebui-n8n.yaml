@@ -1,0 +1,44 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - 11434:11434
+    volumes:
+      - ollama_storage:/root/.ollama
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    networks:
+      - ollama_network
+    restart: unless-stopped
+
+  openwebui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: openwebui
+    ports:
+      - 3000:8080
+    volumes:
+      - openwebui_storage:/app/backend/data
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    networks:
+      - ollama_network
+    restart: unless-stopped
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    container_name: n8n
+    ports:
+      - "5678:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+    networks:
+      - ollama_network
+    restart: unless-stopped
+volumes:
+  ollama_storage:
+  openwebui_storage:
+  n8n_storage:
+
+networks:
+  ollama_network:
+    driver: bridge
