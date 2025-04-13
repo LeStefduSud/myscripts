@@ -1,6 +1,6 @@
 services:
   webtopalpine:
-    image: kasmweb/alpine-321-desktop:alpine-321-desktop:1.17.0-rolling-weekly
+    image: kasmweb/alpine-321-desktop:1.17.0-rolling-weekly
     container_name: WebTopAlpine
     restart: unless-stopped
     shm_size: 1gb
