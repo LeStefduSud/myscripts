@@ -1,6 +1,6 @@
 services:
   webtopalpine:
-    image: kasmweb/alpine-320-desktop:1.16.1-rolling-daily  
+    image: kasmweb/alpine-321-desktop:alpine-321-desktop:1.17.0-rolling-weekly
     container_name: WebTopAlpine
     restart: unless-stopped
     shm_size: 1gb
@@ -10,7 +10,7 @@ services:
     environment:
       - LC_ALL=fr_FR.UTF-8
       - TZ=Europe/Paris
-      - TITLE=WebtopUbuntu
+      - TITLE=WebtopAlpine
       - VNC_PW=CHANGEMEONINSTALL
     ports:
       - "6901:6901"
