@@ -6,9 +6,9 @@
 
 #installtion of docker Kasmweb with latest version
 cd /tmp
-curl -O https://kasm-static-content.s3.amazonaws.com/kasm_release_1.16.1.98d6fa.tar.gz
-tar -xf kasm_release_1.16.1.98d6fa.tar.gz
-sudo bash kasm_release/install.sh --proxy-port 9443
+curl -O https://kasm-static-content.s3.amazonaws.com/kasm_release_1.17.0.7f020d.tar.gz
+tar -xf kasm_release_1.17.0.7f020d.tar.gz
+sudo bash kasm_release/install.sh
 
 #upgrading to a newer version
 # https://www.kasmweb.com/docs/latest/upgrade/single_server_upgrade.html#automated-upgrade
